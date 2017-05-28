@@ -1,7 +1,8 @@
-$('ul li').on('click', function() {
+$('ul li').on('click', function(e) {
     $('ul li').removeClass('active');
     $(this).addClass('active');
     var test = $(this).children('a').attr('href');
+    e.preventDefault();
 
     $('html, body').animate({
         'scrollTop': $(test).offset().top
