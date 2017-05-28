@@ -137,3 +137,15 @@ img{
 .show{
     opacity: 1;
 }
+
+.hover-detail h3 a{
+    text-transform: capitalize;
+    transition-duration: .2s;
+    color: white;
+}
+
+.hover-detail h3 a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: orange;
+}

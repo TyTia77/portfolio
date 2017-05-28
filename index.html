@@ -12,35 +12,11 @@
 </head>
 
 <body ng-app='app' ng-controller='ctrl'>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                <a class="navbar-brand" href="#">Ty Tia</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#about">about <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#portfolio">portfolio</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+    <div ng-include="'views/navbar.html'"></div>
     <main>
         <span id="about"></span>
         <header class="">
-            <img class="img-responsive image" src="pic.jpg">
+            <img class="img-responsive image" src="images/pic.jpg">
             <span class="text-overlay">
                 <h1 class="about-header">
                     graduate / junior front-end developer
@@ -60,10 +36,11 @@
                         <div>&nbsp;</div>
                         <div style="background-color: {{project.color}}">
                             <img src="{{project.img}}"></img>
-                            <div class="hover-detail"ng-mouseover="mouseIn($event)" ng-mouseleave="mouseOut($event)">
-                                <h3>{{project.title}}</h3>
-                                <h3>source code</h3>
-                                <h3>go to site</h3>
+                            <!-- <div class="hover-detail"ng-mouseover="mouseIn($event)" ng-mouseleave="mouseOut($event)"> -->
+                            <div class="hover-detail">
+                                <h2 class="text-capitalize">{{project.title}}</h2>
+                                <h3><a href="https://github.com/TyTia77/{{project.id}}" target="_blank">view source code</a></h3>
+                                <h3><a href="https://tytia77.github.io/{{project.id}}" target="_blank">go to site</a></h3>
                             </div>
                         </div>
                     </div>
