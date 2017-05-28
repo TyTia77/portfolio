@@ -3,6 +3,25 @@ body{
     margin: 0;
 }
 
+/*
+font-family: 'Chewy', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Ceviche One', cursive; no
+font-family: 'Rammetto One', cursive;
+*/
+
+.about-header{
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+.portfolio-header,
+.contact-header{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+}
+
+
 .navbar{
     background-color: rgba(255,255,255,0);
     backdrop-filter: blur(3px);
@@ -41,13 +60,65 @@ header{
 }
 
 .squares{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     text-align: center;
     height: 300px;
+    padding: 15px;
 }
 
 #portfolio,
 #contact{
     position: relative;
-    top: -40px;
+    top: -50px;
+}
+
+.project-card{
+    /*padding: 5px;*/
+    height: 100%;
+    /*border: 1px solid grey;*/
+    position: relative;
+    border-radius: 5px;
+    /*box-shadow: 1px 2px 3px 1px grey;*/
+}
+
+.project-card span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 4px;
+}
+
+.project-card span:nth-child(1){
+    background-color: red;
+    left: 2px;
+}
+.project-card span:nth-child(2){
+    background-color: orange;
+    left: 14px;
+}
+.project-card span:nth-child(3){
+    background-color: green;
+    left: 26px;
+}
+
+.project-card div{
+
+}
+
+.project-card div:nth-of-type(1){
+    background-color: #E6E6E6;
+    color: grey;
+}
+
+.project-card div:nth-of-type(2){
+    height: 90%;
+    border: 1px solid #E6E6E6;
+    border-top: none;
+    overflow: hidden;
+}
+
+img{
+    max-height: 100%;
+    width: auto;
 }

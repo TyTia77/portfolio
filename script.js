@@ -5,14 +5,14 @@ $('ul li').on('click', function() {
 
     $('html, body').animate({
         'scrollTop': $(test).offset().top
-    }, 1500);
+    }, 1000);
 
 });
 
 $(window).scroll(function() {
     if ($(window).scrollTop() > 100) {
         $('.navbar').css({
-            'background-color': 'rgba(255,255,255,.6)'
+            'background-color': 'rgba(255,255,255,.8)'
         });
     } else {
         $('.navbar').css({
