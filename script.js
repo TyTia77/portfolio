@@ -27,34 +27,14 @@ var app = angular.module('app', []);
 
 app.controller('ctrl', ['$scope', function($scope){
     $scope.projects = [
-        {
-            img: 'Capture.PNG'
-        },
-        {
-            img: 'Capture1.PNG',
-            color: '#162924'
-        },
-        {
-            img: 'Capture2.PNG',
-            color: '#E74C3C'
-        },
-        {
-            img: 'Capture3.PNG'
-        },
-        {
-            img: 'Capture4.PNG'
-        },
-        {
-            img: 'Capture5.PNG',
-            color: '#092B40'
-        },
-        {
-            img: 'Capture6.PNG',
-            color: '#2C3E50'
-        },
-        {
-            img: 'Capture7.PNG'
-        }
+        {img: 'Capture.PNG', title: 'simon game'},
+        {img: 'Capture1.PNG', title: 'tic tac toe game', color: '#162924'},
+        {img: 'Capture2.PNG', title: 'quote generater', color: '#E74C3C'},
+        {img: 'Capture3.PNG', title: 'twitch stream viewer'},
+        {img: 'Capture4.PNG', title: 'weather app'},
+        {img: 'Capture5.PNG', title: 'wikipedia search', color: '#092B40'},
+        {img: 'Capture6.PNG', title: '', color: '#2C3E50'},
+        {img: 'Capture7.PNG', title: 'calculator'}
     ];
 
     $scope.mouseIn = function(e){

@@ -127,11 +127,11 @@ img{
     position: absolute;
     height: 90%;
     width: 100%;
-    background-color: rgba(0,0,0,.7)!important;
+    background-color: rgba(0,0,0,.85)!important;
     color: #fff!important;
-    transform: translateY(-100%);
     opacity: 0;
     transition-duration: .5s;
+    transform: translateY(-100%);
 }
 
 .show{
