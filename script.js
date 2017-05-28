@@ -22,3 +22,48 @@ $(window).scroll(function() {
     }
 
 });
+
+var app = angular.module('app', []);
+
+app.controller('ctrl', ['$scope', function($scope){
+    $scope.projects = [
+        {
+            img: 'Capture.PNG'
+        },
+        {
+            img: 'Capture1.PNG',
+            color: '#162924'
+        },
+        {
+            img: 'Capture2.PNG',
+            color: '#E74C3C'
+        },
+        {
+            img: 'Capture3.PNG'
+        },
+        {
+            img: 'Capture4.PNG'
+        },
+        {
+            img: 'Capture5.PNG',
+            color: '#092B40'
+        },
+        {
+            img: 'Capture6.PNG',
+            color: '#2C3E50'
+        },
+        {
+            img: 'Capture7.PNG'
+        }
+    ];
+
+    $scope.mouseIn = function(e){
+        e.target.classList.add('show');
+    }
+
+    $scope.mouseOut = function(e){
+        e.target.classList.remove('show');
+    }
+
+
+}]);
