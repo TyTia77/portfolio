@@ -7,25 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ceviche+One|Chewy|Luckiest+Guy|Rammetto+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Ceviche+One|Chewy|Luckiest+Guy|Rammetto+One">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body ng-app='app' ng-controller='ctrl'>
     <div ng-include="'views/navbar.html'"></div>
     <main>
-        <span id="about"></span>
-        <header class="">
-            <img class="img-responsive image" src="images/pic.jpg">
-            <span class="text-overlay">
-                <h1 class="about-header">
-                    graduate / junior front-end developer
-                </h1>
-            </span>
-        </header>
-
+        <span id="portfolio"></span>
         <div class="container-fluid">
-            <span id="portfolio"></span>
             <h1 class="text-center portfolio-header">portfolio</h1>
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 squares" ng-repeat="project in projects">
@@ -36,7 +27,6 @@
                         <div>&nbsp;</div>
                         <div style="background-color: {{project.color}}">
                             <img src="{{project.img}}"></img>
-                            <!-- <div class="hover-detail"ng-mouseover="mouseIn($event)" ng-mouseleave="mouseOut($event)"> -->
                             <div class="hover-detail">
                                 <h2 class="text-capitalize">{{project.title}}</h2>
                                 <h3><a href="https://github.com/TyTia77/{{project.id}}" target="_blank">view source code</a></h3>
@@ -46,39 +36,12 @@
                     </div>
                 </div>
             </div>
-
-            <span id="contact"></span>
-            <div class="container-fluid">
-                <div class="row">
-                    <h1 class="text-center contact-header">contact</h1>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-6 text-center phone">
-                        <i class="fa fa-phone fa-3x" aria-hidden="true"></i><br>
-                        <h3>0401 688 936</h3>
-                    </div>
-                    <div class="col-xs-6 text-center email">
-                        <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i><br>
-                        <h3>tytia77@gmail.com</h3>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </div>
     </main>
     <script src="https://use.fontawesome.com/89e76766d0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
