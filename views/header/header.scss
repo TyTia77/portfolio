@@ -24,7 +24,7 @@
 
         h1{
             opacity: 0;
-            animation: scale 1s 1s ease forwards;
+            animation: fade 1s 1s ease forwards;
         }
 
         .line{
@@ -48,7 +48,7 @@
         button{
             margin-top: 40px;
             opacity: 0;
-            animation: scale 1.5s 5s ease forwards;
+            animation: scale .7s 5s ease forwards;
         }
 
         .row{
