@@ -7,16 +7,103 @@
         background-image: url('../../images/pic.jpg');
         background-position: center;
         background-size: cover;
-        opacity: .7;
+        opacity: .4;
         height: 100%;
+        animation: blur 6s ease reverse;
     }
 
     .header-content{
         position: absolute;
         left: 50%;
         top: 50%;
+        width: 100%;
         color: white;
         transform: translate(-50%, -50%);
         margin: auto;
+        text-align: center;
+
+        h1{
+            opacity: 0;
+            animation: scale 1s 1s ease forwards;
+        }
+
+        .line{
+            display: block;
+            position: relative;
+            top: 10px;
+            margin: 0 auto;
+            height: 3px;
+            width: 0;
+            background-color: #D9534F;
+            animation: grow 1.5s 2s ease forwards;
+        }
+
+        h3{
+            position: relative;
+            top: 15px;
+            opacity: 0;
+            animation: fade 1.5s 3s ease forwards;
+        }
+
+        button{
+            margin-top: 40px;
+            opacity: 0;
+            animation: scale 1.5s 5s ease forwards;
+        }
+
+        .row{
+            position: relative;
+            top: 20px;
+
+            span{
+                opacity: 0;
+                animation: fade 1.5s 4s ease forwards;
+                color: #D9534F;
+                color: #fff;
+                font-size: 6em;
+
+                // &:nth-of-type(1){
+                //     text-align: right;
+                // }
+                // &:nth-of-type(3){
+                //     text-align: left;
+                // }
+            }
+        }
+
+
+        // .header{
+        //     &::after{
+        //         content: '';
+        //         display: block;
+        //         position: relative;
+        //         margin: 0 auto;
+        //         top: 15px;
+        //         width: 300px;
+        //         height: 3px;
+        //         background-color: #D9534F;
+        //     }
+        // }
     }
+}
+
+@keyframes blur {
+    0% {filter: blur(0)}
+    100% {filter: blur(20px)}
+}
+
+@keyframes fade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes grow {
+    0% {width: 0}
+    100% {width: 30%}
+}
+
+@keyframes scale {
+    0% {opacity: 0; transform: scale(1, 1);}
+    50% {opacity: 1; transform: scale(1.5, 1.5);}
+    100% {opacity: 1; transform: scale(1, 1)}
 }
