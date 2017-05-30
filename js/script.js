@@ -25,13 +25,17 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
     // $timeout(function(){
     //     $scope.loaded = true;
     // },5000)
-    $(function(){
-        $('.header-image').ready(function(){
-            console.log('done');
-            $scope.loaded = true;
-        })
-    })
+    // $(function(){
+    //     $('.header-image').ready(function(){
+    //         console.log('done');
+    //         $scope.loaded = true;
+    //     })
+    // })
 
+    $('.image-loader').ready(function(){
+        console.log('ready');
+        $scope.loaded = true;
+    })
 
 
 
