@@ -30,16 +30,10 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
 
     function loadImage(){
         var img = new Image();
-    //     img.addEventListener('load', function(){
-    //         $scope.loaded = true;
-    //         console.log('fired');
-    //     }, false);
-
-        img.onload(function(){
+        img.addEventListener('load', function(){
             $scope.loaded = true;
             console.log('fired');
-        });
-
+        }, false);
         img.src = 'images/pic.jpg';
     }
 }]);
