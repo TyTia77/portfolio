@@ -18,14 +18,6 @@ app.controller('ctrl', ['$scope', function($scope){
         {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
     ];
 
-    $scope.mouseIn = function(e){
-        e.target.classList.add('show');
-    }
-
-    $scope.mouseOut = function(e){
-        e.target.classList.remove('show');
-    }
-
     $(document).on('mouseenter', '.hover-detail', function(){
         $(this).addClass('show');
     }).on('mouseleave', '.hover-detail', function(){
