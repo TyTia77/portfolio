@@ -20,37 +20,19 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
 
 
     $scope.loaded = false;
-
-
-    // $timeout(function(){
-    //     $scope.loaded = true;
-    // },5000)
-    // $(function(){
-    //     $('.header-image').ready(function(){
-    //         console.log('done');
-    //         $scope.loaded = true;
-    //     })
-    // })
-
-
-
-    var img = new Image();
-    img.onload = function(){
-        // $('.header-image').css({'background-image': 'url(' +img.src +')', 'background-color': 'red'});
-
-        // document.getElementsByClassName('header-image').style.backgroundImage = img.src;
-        $timeout(function(){
-            $scope.loaded = true;
-        },1000)
-    };
-
-    img.src = 'images/pic.jpg';
-
-
+    loadImage();
 
     $(document).on('mouseenter', '.hover-detail', function(){
         $(this).addClass('show');
     }).on('mouseleave', '.hover-detail', function(){
         $(this).removeClass('show');
     })
+
+    function loadImage(){
+        var img = new Image();
+        img.onload = function(){
+            $scope.loaded = true;
+        };
+        img.src = 'images/pic.jpg';
+    }
 }]);
