@@ -28,12 +28,18 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
         $(this).removeClass('show');
     })
 
-    function loadImage(){
-        var img = new Image();
-        img.addEventListener('load', function(){
+    // function loadImage(){
+    //     var img = new Image();
+    //     img.addEventListener('load', function(){
+    //         $scope.loaded = true;
+    //         console.log('fired');
+    //     }, false);
+
+        img.onload(function(){
             $scope.loaded = true;
             console.log('fired');
-        }, false);
+        });
+
         img.src = 'images/pic.jpg';
     }
 }]);
