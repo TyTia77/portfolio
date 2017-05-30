@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Ceviche+One|Chewy|Luckiest+Guy|Rammetto+One">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -13,40 +13,16 @@
 </head>
 
 <body ng-app='app' ng-controller='ctrl'>
-    <div ng-include="'views/navbar.html'"></div>
+    <div ng-include="'views/navbar/navbar.html'"></div>
 
     <main>
         <span id="about"></span>
-        <div class="header-container">
-            <div class="header-image"></div>
-            <div class="header-content">
-                <h2 class="text-capitalize">graduate front-end developer</h2>
-            </div>
-        </div>
+        <div ng-include="'views/header/header.html'"></div>
 
         <span id="portfolio"></span>
-        <div class="container-fluid">
-            <h1 class="text-center portfolio-header">portfolio</h1>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 squares" ng-repeat="project in projects">
-                    <div class="project-card">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <div>&nbsp;</div>
-                        <div style="background-color: {{project.color}}">
-                            <img src="{{project.img}}"></img>
-                            <div class="hover-detail">
-                                <h2 class="text-capitalize">{{project.title}}</h2>
-                                <h3><a href="https://github.com/TyTia77/{{project.id}}" target="_blank">view source code</a></h3>
-                                <h3><a href="https://tytia77.github.io/{{project.id}}" target="_blank">go to site</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div ng-include="'views/portfolio/portfolio.html'"></div>
     </main>
+
     <script src="https://use.fontawesome.com/89e76766d0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
