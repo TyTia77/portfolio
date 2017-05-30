@@ -4,17 +4,15 @@
     width: 100vw;
 
     .header-image{
-        background-image: url(./images/pic.jpg);
+        background-image: url('../../images/pic.jpg');
         background-position: center;
         background-size: cover;
-        opacity: .5;
+        opacity: .7;
         height: 100%;
     }
 
     .header-content{
         position: absolute;
-        opacity: 1!important;
-        z-index: 1;
         left: 50%;
         top: 50%;
         color: white;
