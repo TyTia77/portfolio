@@ -22,3 +22,13 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+
+<script>
+    $('ul li').on('click', function(e){
+        var hash = $(this).children('a').attr('href');
+        $('html, body').animate({
+            'scrollTop': $(hash).offset().top
+        }, 700);
+        return false;
+    })
+</script>

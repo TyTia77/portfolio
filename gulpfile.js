@@ -23,7 +23,7 @@ gulp.task('minjson', () => {
 
 gulp.task('minimage', () => {
     return gulp
-        .src('src/images/*')
+        .src('images/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'));
 });
