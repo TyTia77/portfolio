@@ -18,6 +18,20 @@ app.controller('ctrl', ['$scope', function($scope){
         {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
     ];
 
+    loadImage();
+
+    function loadImage(){
+        var img = new Image();
+        img.onload = function(){
+            $('.header-image').css('background-image', 'url(../images/pic.jpg)');
+            console.log('done');
+        }
+        img.src = '../images/pic.jpg';
+        if (img.complete) {
+            img.onload();
+        }
+    }
+
     $(document).on('mouseenter', '.hover-detail', function(){
         $(this).addClass('show');
     }).on('mouseleave', '.hover-detail', function(){
