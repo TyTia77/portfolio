@@ -32,10 +32,19 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
     //     })
     // })
 
-    $('.image-loader').ready(function(){
-        console.log('ready');
-        $scope.loaded = true;
-    })
+
+
+    var img = new Image();
+    img.onload = function(){
+        // $('.header-image').css({'background-image': 'url(' +img.src +')', 'background-color': 'red'});
+
+        // document.getElementsByClassName('header-image').style.backgroundImage = img.src;
+        $timeout(function(){
+            $scope.loaded = true;
+        },1000)
+    };
+
+    img.src = 'images/pic.jpg';
 
 
 
