@@ -32,6 +32,6 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
             $scope.loaded = true;
             $scope.$digest();
         }, false);
-        img.src = 'images/pic.jpg';
+        img.src = 'images/pic1.jpg';
     }
 }]);
