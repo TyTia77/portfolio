@@ -4,7 +4,7 @@
     width: 100vw;
 
     .header-image{
-        background-image: url('../../images/pic.jpg');
+        background-image: url('../images/pic.jpg');
         background-position: center;
         background-size: cover;
         opacity: .4;
@@ -99,7 +99,7 @@
 
 @keyframes grow {
     0% {width: 0}
-    100% {width: 30%}
+    100% {width: 35%}
 }
 
 @keyframes scale {
