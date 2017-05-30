@@ -13,15 +13,20 @@
 </head>
 
 <body ng-app='app' ng-controller='ctrl'>
-    <div ng-include="'views/navbar/navbar.html'"></div>
+    <div ng-if="!loaded" ng-include="'views/loader/loader.html'"></div>
 
-    <main>
-        <span id="about"></span>
-        <div ng-include="'views/header/header.html'"></div>
+    <div ng-if="loaded">
+        <div ng-include="'views/navbar/navbar.html'"></div>
 
-        <span id="portfolio"></span>
-        <div ng-include="'views/portfolio/portfolio.html'"></div>
-    </main>
+        <main>
+            <span id="about"></span>
+            <div ng-include="'views/header/header.html'"></div>
+
+            <span id="portfolio"></span>
+            <div ng-include="'views/portfolio/portfolio.html'"></div>
+        </main>
+    </div>
+
 
     <script src="https://use.fontawesome.com/89e76766d0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
