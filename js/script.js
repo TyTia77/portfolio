@@ -23,7 +23,7 @@ app.controller('ctrl', ['$scope', function($scope){
     function loadImage(){
         var img = new Image();
         img.onload = function(){
-            $('.header-image').css('background-image', 'url(../images/pic.jpg)');
+            $('.header-image').css('background-image', 'url(images/pic.jpg)');
             console.log('done');
         }
         img.src = '../images/pic.jpg';
