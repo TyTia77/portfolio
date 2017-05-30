@@ -18,8 +18,6 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
         {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
     ];
 
-
-    $scope.loaded = false;
     loadImage();
 
     $(document).on('mouseenter', '.hover-detail', function(){
@@ -32,6 +30,7 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
         var img = new Image();
         img.addEventListener('load', function(){
             $scope.loaded = true;
+            $scope.$digest();
         }, false);
         img.src = 'images/pic.jpg';
     }

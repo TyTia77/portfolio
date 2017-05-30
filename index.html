@@ -13,7 +13,7 @@
 </head>
 
 <body ng-app='app' ng-controller='ctrl'>
-    <div ng-show="!loaded" ng-include="'views/loader/loader.html'"></div>
+    <div ng-if="!loaded" ng-include="'views/loader/loader.html'"></div>
 
     <div ng-show="loaded" class="app-container">
         <div ng-include="'views/navbar/navbar.html'"></div>
