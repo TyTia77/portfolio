@@ -31,7 +31,7 @@ gulp.task('minimage', () => {
 
 gulp.task('buildcss', () => {
     return gulp
-        .src(['style/**/*.+(scss|css)', 'views/**/*.+(scss|css)'])
+        .src(['style/style.scss', 'views/**/*.+(scss|css)'])
         .pipe(sass())
         .pipe(uglifycss({
             // "maxLineLen": 80,

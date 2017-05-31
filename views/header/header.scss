@@ -1,3 +1,5 @@
+@import "../../style/variables.scss";
+
 .header-container{
     position: relative;
     height: 100vh;
@@ -17,7 +19,7 @@
         left: 50%;
         top: 50%;
         width: 100%;
-        color: white;
+        color: #fff;
         transform: translate(-50%, -50%);
         margin: auto;
         text-align: center;
@@ -34,7 +36,7 @@
             margin: 0 auto;
             height: 3px;
             width: 0;
-            background-color: #D9534F;
+            background-color: $red;
             animation: grow 1s 2s ease forwards;
         }
 
@@ -58,32 +60,10 @@
             span{
                 opacity: 0;
                 animation: fade 1.5s 4s ease forwards;
-                color: #D9534F;
                 color: #fff;
                 font-size: 6em;
-
-                // &:nth-of-type(1){
-                //     text-align: right;
-                // }
-                // &:nth-of-type(3){
-                //     text-align: left;
-                // }
             }
         }
-
-
-        // .header{
-        //     &::after{
-        //         content: '';
-        //         display: block;
-        //         position: relative;
-        //         margin: 0 auto;
-        //         top: 15px;
-        //         width: 300px;
-        //         height: 3px;
-        //         background-color: #D9534F;
-        //     }
-        // }
     }
 }
 

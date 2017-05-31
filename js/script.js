@@ -18,22 +18,10 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
         {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
     ];
 
-
     $(document).on('mouseenter', '.hover-detail', function(){
         $(this).addClass('show');
     }).on('mouseleave', '.hover-detail', function(){
         $(this).removeClass('show');
     })
-
     
-    loadImage();
-
-    function loadImage(){
-        var img = new Image();
-        img.addEventListener('load', function(){
-            $scope.loaded = true;
-            $scope.$digest();
-        }, false);
-        img.src = 'images/pic1.jpg';
-    }
 }]);
