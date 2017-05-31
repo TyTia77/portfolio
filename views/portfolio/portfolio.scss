@@ -63,6 +63,7 @@
                     opacity: 0;
                     transition-duration: .5s;
                     transform: translateY(-100%);
+                    pointer-events: none;
 
                     h3{
                         a{
@@ -81,6 +82,7 @@
 
                 .show{
                     opacity: 1;
+                    pointer-events: all;
                 }
             }
         }
