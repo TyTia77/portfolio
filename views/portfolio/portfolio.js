@@ -15,4 +15,28 @@ $(document).ready(function(){
         })
     }, 1);
 
+
+
+
+
+
+    if (/Mobi/.test(navigator.userAgent)) {
+        // mobile!
+        $(document).on('tap', 'body', function(){
+            $('.hover-detail').removeClass('show');
+        })
+
+        $(document).on('tap', '.hover-detail', function(e){
+            e.stopPropagation();
+            $(this).addClass('show');
+        })
+    } else {
+        $(document).on('mouseenter', '.hover-detail', function(){
+            $(this).addClass('show');
+        }).on('mouseleave', '.hover-detail', function(){
+            $(this).removeClass('show');
+        });
+    }
+
+
 })
