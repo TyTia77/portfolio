@@ -1,0 +1,88 @@
+.portfolio-header{
+    color: #fff!important;
+}
+
+.squares{
+    text-align: center;
+    height: 300px;
+    padding: 15px;
+
+    .project-card{
+        height: 100%;
+        position: relative;
+        border-radius: 5px;
+
+        span{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            top: 4px;
+
+            &:nth-child(1){
+                background-color: red;
+                left: 2px;
+            }
+
+            &:nth-child(2){
+                background-color: orange;
+                left: 14px;
+            }
+
+            &:nth-child(3){
+                background-color: green;
+                left: 26px;
+            }
+        }
+
+        div{
+            &:nth-of-type(1){
+                background-color: #E6E6E6;
+                color: grey;
+            }
+
+            &:nth-of-type(2){
+                height: 90%;
+                border: 1px solid #E6E6E6;
+                border-top: none;
+                overflow: hidden;
+
+                .project-image{
+                    height: 100%;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                .hover-detail{
+                    position: absolute;
+                    height: 90%;
+                    width: 100%;
+                    background-color: rgba(0,0,0,.85)!important;
+                    color: #fff!important;
+                    opacity: 0;
+                    transition-duration: .5s;
+                    transform: translateY(-100%);
+
+                    h3{
+                        a{
+                            text-transform: capitalize;
+                            transition-duration: .2s;
+                            color: white;
+
+                            &:hover{
+                                cursor: pointer;
+                                text-decoration: none;
+                                color: orange;
+                            }
+                        }
+                    }
+                }
+
+                .show{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

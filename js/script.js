@@ -23,5 +23,5 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
     }).on('mouseleave', '.hover-detail', function(){
         $(this).removeClass('show');
     })
-    
+
 }]);

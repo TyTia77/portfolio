@@ -1,0 +1,61 @@
+@import "../../style/variables.scss";
+
+// override bootstrap defaults
+.navbar-default{
+    .navbar-brand{
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+
+    .navbar-nav{
+        .active{
+            a{
+                color: $red!important;
+                background-color: transparent!important;
+
+                &:hover{
+                    color: $red;
+                    background-color: transparent;
+                }
+            }
+        }
+
+
+        li{
+            a{
+                text-transform: capitalize;
+                font-weight: bold;
+                font-size: 1.1em;
+                color: #fff!important;
+                background-color: rgba(0,0,0,0);
+                transition-duration: .3s;
+
+                &:hover{
+                    color: #fff;
+                    background-color: rgba(0,0,0,0);
+                }
+            }
+        }
+    }
+}
+
+
+.navbar{
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    transition-duration: .5s;
+    width: 100%;
+    transform: translateY(-100%);
+    animation: slide-down .5s 6s ease forwards;
+}
+
+@keyframes slide-down {
+    0% {transform: translateY(-100%)}
+    100% {transform: translateY(0)}
+}
