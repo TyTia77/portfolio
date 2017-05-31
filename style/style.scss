@@ -1,29 +1,29 @@
-/*
-font-family: 'Chewy', cursive;
-font-family: 'Luckiest Guy', cursive;
-font-family: 'Ceviche One', cursive; no
-font-family: 'Rammetto One', cursive;
-*/
 @import 'reset';
 @import 'variables';
 @import 'mixins';
 
-.app-container{
-    opacity: 0;
-    animation: fade-in 1s ease forwards;
-}
 
-main{
-    position: relative;
-    background-color: #2A2A2A;
+body {
+    overflow-x: hidden;
+    background-color: $brown;
 
-    div.container-fluid{
-        min-height: 100vh;
-    }
+    .app-container{
+        opacity: 0;
+        animation: fade-in 1s ease forwards;
 
-    #portfolio{
-        position: relative;
-        top: -50px;
+        main{
+            position: relative;
+            background-color: $brown;
+
+            div.container-fluid{
+                min-height: 100vh;
+            }
+
+            #portfolio{
+                position: relative;
+                top: -50px;
+            }
+        }
     }
 }
 
