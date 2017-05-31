@@ -11,6 +11,10 @@
     padding: 15px;
     padding-top: 70px;
 
+    &:last-of-type{
+        margin-bottom: 100px;
+    }
+
     .project-card{
         height: 100%;
         position: relative;
