@@ -40,12 +40,12 @@ $(document).ready(function() {
 
     if (mobileAndTabletcheck()){
 
-        $(document).on('tap', 'body', function() {
+        $(document).on('click', 'body', function() {
             $('.hover-detail').removeClass('show');
             $('.hover-detail').children('h3').children('a').css('pointer-events', 'none');
         })
 
-        $(document).on('tap', '.hover-detail', function(e) {
+        $(document).on('click', '.hover-detail', function(e) {
             e.stopPropagation();
             $(this).addClass('show');
             $(this).children('h3').children('a').css('pointer-events', 'all');
