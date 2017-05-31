@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // check if mobile / tablet device
+    // check if mobile or tablet device
     window.mobileAndTabletcheck = function() {
         var check = false;
         (function(a) {
@@ -20,27 +20,43 @@ $(document).ready(function() {
             origin: 'left',
             viewFactor: .3,
             opacity: 0,
-            delay: .5,
             duration: 700,
             scale: .1,
             mobile: true
         })
+
+        sr.reveal('.project-card>h3', {
+            origin: 'bottom',
+            viewFactor: .3,
+            distance: '50px',
+            opacity: 0,
+            delay: 300,
+            duration: 800,
+            mobile: true,
+        })
+
+
     }, 1);
 
     if (mobileAndTabletcheck()){
+
         $(document).on('tap', 'body', function() {
             $('.hover-detail').removeClass('show');
+            $('.hover-detail').children('h3').children('a').css('pointer-events', 'none');
         })
 
         $(document).on('tap', '.hover-detail', function(e) {
             e.stopPropagation();
             $(this).addClass('show');
+            $(this).children('h3').children('a').css('pointer-events', 'all');
         })
     } else {
         $(document).on('mouseenter', '.hover-detail', function() {
             $(this).addClass('show');
+            $(this).children('h3').children('a').css('pointer-events', 'all')
         }).on('mouseleave', '.hover-detail', function() {
             $(this).removeClass('show');
+            $(this).children('h3').children('a').css('pointer-events', 'none');
         });
     }
 })
