@@ -4,7 +4,7 @@
             <h1 class="text-capitalize header">graduate front-end developer</h1>
 
             <span class="line"></span>
-            <h3 class="text-capitalize">I enjoy using HTML, CSS and Javascript to build web applications !!</h3>
+            <h3 class="text-capitalize sub-header">I enjoy using HTML, CSS and Javascript to build web applications !!</h3>
             <!-- <div class="more text-center">
                 view projects
             </div> -->
@@ -16,7 +16,7 @@
                 <!-- <span class="ion-social-css3-outline"></span> -->
             </div>
 
-            <button class="btn btn-danger button">view projects</button>
+            <button class="btn btn-danger button text-capitalize">view projects</button>
 
         <!-- <span class="ion-social-nodejs" style="font-size: 4em"></span> -->
         <!-- <span class="ion-alert-circled" style="font-size: 4em"></span> -->
@@ -25,3 +25,12 @@
 
     </div>
 </div>
+
+<script>
+    $('.button').on('click', function(){
+        $('html, body').animate({
+            'scrollTop': $('#portfolio').offset().top
+        }, 700);
+        return false;
+    })
+</script>

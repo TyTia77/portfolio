@@ -16,6 +16,16 @@ $(document).ready(function() {
             reset: true
         });
 
+        sr.reveal('.portfolio-header', {
+            origin: 'top',
+            viewFactor: .1,
+            distance: '100px',
+            opacity: 0,
+            duration: 700,
+            scale: .1,
+            mobile: true
+        })
+
         sr.reveal('.squares', {
             origin: 'left',
             viewFactor: .3,
@@ -48,7 +58,9 @@ $(document).ready(function() {
         $(document).on('click touchstart', '.hover-detail', function(e) {
             e.stopPropagation();
             $(this).addClass('show');
-            $(this).children('h3').children('a').css('pointer-events', 'all');
+            setTimeout(function(){
+                $(this).children('h3').children('a').css('pointer-events', 'all');
+            },100);
         })
     } else {
         $(document).on('mouseenter', '.hover-detail', function() {

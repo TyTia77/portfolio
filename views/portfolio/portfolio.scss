@@ -1,7 +1,10 @@
+@import "../../style/variables.scss";
+
 .portfolio-header{
     position: relative;
     top: 25px;
-    color: #fff!important;
+    font-family: Comic;
+    color: lightgrey !important;
     text-transform: capitalize;
 }
 
@@ -56,39 +59,47 @@
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
-                }
 
-                .hover-detail{
-                    position: absolute;
-                    height: 90%;
-                    width: 100%;
-                    background-color: rgba(0,0,0,.85)!important;
-                    color: #fff!important;
-                    opacity: 0;
-                    transition-duration: .5s;
-                    transform: translateY(-100%);
-                    // pointer-events: none;
 
-                    h3{
-                        a{
-                            pointer-events: none;
-                            text-transform: capitalize;
-                            transition-duration: .2s;
-                            color: white;
+                    .hover-detail{
+                        position: absolute;
+                        height: 90%;
+                        width: 100%;
+                        background-color: rgba(0,0,0,.85)!important;
+                        // color: #fff!important;
+                        border: 1px solid #E5E5E5;
+                        opacity: 0;
+                        transition-duration: .5s;
+                        transform: translateX(-1px);
 
-                            &:hover{
-                                cursor: pointer;
-                                text-decoration: none;
-                                color: orange;
+                        h3{
+
+                            position: relative;
+                            top: 15%;
+
+                            a{
+                                pointer-events: none;
+                                text-transform: capitalize;
+                                transition-duration: .2s;
+                                color: lightgrey;
+                                font-family: Comic;
+
+                                &:visited, &:active, &:focus{
+                                    text-decoration: none;
+                                }
+
+                                &:hover{
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                    color: $red;
+                                }
                             }
                         }
                     }
-                }
 
-
-
-                .show{
-                    opacity: 1;
+                    .show{
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -97,6 +108,8 @@
         h3{
             text-transform: capitalize;
             color: #fff;
+            font-family: Comic;
+            color: lightgrey;
         }
     }
 }
