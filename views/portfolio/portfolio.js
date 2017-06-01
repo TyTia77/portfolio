@@ -42,7 +42,7 @@ $(document).ready(function() {
             opacity: 0,
             delay: 300,
             duration: 800,
-            mobile: true,
+            mobile: true
         })
 
 
@@ -57,10 +57,16 @@ $(document).ready(function() {
 
         $(document).on('click touchstart', '.hover-detail', function(e) {
             e.stopPropagation();
-            $(this).addClass('show');
-            setTimeout(function(){
-                $(this).children('h3').children('a').css('pointer-events', 'all');
-            },100);
+            var scrollPosStart = $(document).scrollTop();
+
+            $(document).on('click touchend', '.hover-detail', function(e){
+                var scrollPosEnd = $(document).scrollTop();
+
+                if(scrollPosStart === scrollPosEnd){
+                    $(this).addClass('show');
+                    $(this).children('h3').children('a').css('pointer-events', 'all');
+                }
+            })
         })
     } else {
         $(document).on('mouseenter', '.hover-detail', function() {
