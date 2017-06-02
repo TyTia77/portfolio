@@ -37,7 +37,7 @@ $(document).ready(function() {
 
         sr.reveal('.project-card>h3', {
             origin: 'bottom',
-            viewFactor: .3,
+            viewFactor: .01,
             distance: '50px',
             opacity: 0,
             delay: 300,

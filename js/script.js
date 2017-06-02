@@ -16,6 +16,7 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
         {img: 'images/Capture2.PNG', title: 'quote generater', id: 'quotes', color: '#E74C3C'},
         {img: 'images/Capture3.PNG', title: 'twitch stream viewer', id: 'twitch-streams', color: '#fff'},
         {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
+        {img: 'images/Capture4.PNG', title: 'weather app', id: 'weatherapp', color: '#0262B6'}
     ];
 
 
