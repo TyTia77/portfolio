@@ -12,41 +12,41 @@ $(document).ready(function() {
 
     // elements hasn't been loaded yet
     setTimeout(function() {
-        window.sr = ScrollReveal({
-            reset: true
-        });
+        // window.sr = ScrollReveal({
+        //     reset: true
+        // });
+        //
+        // sr.reveal('.portfolio-header', {
+        //     origin: 'top',
+        //     viewFactor: .1,
+        //     distance: '100px',
+        //     opacity: 0,
+        //     duration: 700,
+        //     scale: .1,
+        //     mobile: true
+        // })
+        //
+        // sr.reveal('.squares', {
+        //     origin: 'left',
+        //     viewFactor: .3,
+        //     opacity: 0,
+        //     duration: 700,
+        //     scale: .1,
+        //     mobile: true
+        // })
+        //
+        // sr.reveal('.project-card>h3', {
+        //     origin: 'bottom',
+        //     viewFactor: .01,
+        //     distance: '50px',
+        //     opacity: 0,
+        //     delay: 300,
+        //     duration: 800,
+        //     mobile: true
+        // })
 
-        sr.reveal('.portfolio-header', {
-            origin: 'top',
-            viewFactor: .1,
-            distance: '100px',
-            opacity: 0,
-            duration: 700,
-            scale: .1,
-            mobile: true
-        })
 
-        sr.reveal('.squares', {
-            origin: 'left',
-            viewFactor: .3,
-            opacity: 0,
-            duration: 700,
-            scale: .1,
-            mobile: true
-        })
-
-        sr.reveal('.project-card>h3', {
-            origin: 'bottom',
-            viewFactor: .01,
-            distance: '50px',
-            opacity: 0,
-            delay: 300,
-            duration: 800,
-            mobile: true
-        })
-
-
-    }, 1);
+    }, 0);
 
     if (mobileAndTabletcheck()){
 

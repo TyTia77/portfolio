@@ -19,6 +19,42 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
         {img: 'images/Capture4.PNG', title: 'weather app', id: 'weatherapp', color: '#0262B6'}
     ];
 
+    $timeout(function(){
+        console.log('gg');
+        window.sr = ScrollReveal({
+            reset: true
+        });
+
+        sr.reveal('.portfolio-header', {
+            origin: 'top',
+            viewFactor: .1,
+            distance: '100px',
+            opacity: 0,
+            duration: 700,
+            scale: .1,
+            mobile: true
+        })
+
+        sr.reveal('.squares', {
+            origin: 'left',
+            viewFactor: .3,
+            opacity: 0,
+            duration: 700,
+            scale: .1,
+            mobile: true
+        })
+
+        sr.reveal('.project-card>h3', {
+            origin: 'bottom',
+            viewFactor: .01,
+            distance: '50px',
+            opacity: 0,
+            delay: 300,
+            duration: 800,
+            mobile: true
+        })
+    }, 0);
+
 
 
 }]);
