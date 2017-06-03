@@ -1,12 +1,11 @@
 var app = angular.module('app', []);
 
+// apply after dom has be rendered
 app.directive('scrollEffect', ['$timeout', function($timeout){
     return {
         link: function(){
-            $timeout(function(){
-                console.log('gg');
-                console.log($('.squares'));
 
+            $timeout(function(){
                 window.sr = ScrollReveal({
                     reset: true
                 });
@@ -40,6 +39,7 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
                     mobile: true
                 })
             }, 0);
+
         }
     }
 }]);
@@ -55,6 +55,7 @@ app.controller('ctrl', ['$scope', function($scope){
     //     {img: 'images/Capture6.PNG', title: 'pomodoro clock', id: 'pomodoro-clock', color: '#2C3E50'},
     //     {img: 'images/Capture7.PNG', title: 'calculator', id: 'calculator', color: '#fff'}
     // ];
+
     $scope.projects = [
         {img: 'images/Capture.PNG', title: 'simon game', id: 'simon-game', color: '#fff'},
         {img: 'images/Capture1.PNG', title: 'tic tac toe game', id: 'tictactoe', color: '#162924'},
