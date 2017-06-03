@@ -21,6 +21,7 @@ app.controller('ctrl', ['$scope', '$timeout', function($scope, $timeout){
 
     $timeout(function(){
         console.log('gg');
+        console.log($('.squares'));
         window.sr = ScrollReveal({
             reset: true
         });
