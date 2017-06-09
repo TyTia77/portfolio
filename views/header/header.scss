@@ -94,6 +94,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header-image{
+        background-attachment: scroll !important;
+    }
+
     .header,
     .sub-header{
         padding: 0 20px 0 10px;
