@@ -17,6 +17,7 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
                     opacity: 0,
                     duration: 700,
                     scale: .1,
+                    reset: false,
                     mobile: true
                 })
 
@@ -26,6 +27,7 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
                     opacity: 0,
                     duration: 700,
                     scale: .1,
+                    reset: false,
                     mobile: true
                 })
 
@@ -36,6 +38,7 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
                     opacity: 0,
                     delay: 300,
                     duration: 800,
+                    reset: false,
                     mobile: true
                 })
             }, 0);
