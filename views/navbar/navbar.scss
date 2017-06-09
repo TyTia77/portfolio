@@ -16,13 +16,8 @@
         border-color: transparent;
         transition-duration: .2s;
 
-        &:focus{
+        &:focus, &:hover{
             background-color: transparent;
-        }
-
-        &:hover{
-            background-color: transparent;
-            // transform: scale(1.5, 1.5);
         }
 
         .icon-bar{
