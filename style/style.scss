@@ -1,34 +1,4 @@
-@import 'reset';
-@import 'variables';
-@import 'mixins';
-
-
 body {
     overflow-x: hidden;
     background-color: $brown;
-
-    .app-container{
-        opacity: 0;
-        animation: fade-in 1s ease forwards;
-
-        main{
-            position: relative;
-            background-color: $brown;
-
-            div.container-fluid{
-                min-height: 100vh;
-            }
-
-            #portfolio{
-                position: relative;
-                top: -50px;
-            }
-        }
-    }
-}
-
-
-@keyframes fade-in {
-    0% {opacity: 0}
-    100% {opacity: 1}
 }

@@ -1,5 +1,3 @@
-@import "../../style/variables.scss";
-
 .header-container{
     position: relative;
     height: 100vh;
@@ -25,9 +23,13 @@
         margin: auto;
         text-align: center;
 
+        h1, h3{
+        }
+
         h1{
             opacity: 0;
             animation: fade 1s 1s ease forwards;
+            font-family: 'Andika', sans-serif;
         }
 
         .line{

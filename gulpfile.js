@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
 const watch = require('gulp-watch');
@@ -31,7 +32,9 @@ gulp.task('minimage', () => {
 
 gulp.task('buildcss', () => {
     return gulp
-        .src(['style/style.scss', 'views/**/*.+(scss|css)'])
+        // .src(['style/style.scss', 'views/**/*.+(scss|css)'])
+        .src(['style/main.scss'])
+        .pipe(sassGlob())
         .pipe(sass())
         .pipe(uglifycss({
             // "maxLineLen": 80,

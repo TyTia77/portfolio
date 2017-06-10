@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ty Tia</title>
     <link rel="icon" href="https://github.com/fluidicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Andika" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="icons/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/style.min.css">
@@ -23,19 +24,7 @@
 
 <body ng-app="app" ng-controller="ctrl">
 
-    <div class="app-container">
-        <div ng-include="'views/navbar/navbar.html'"></div>
-
-        <main>
-            <span id="about"></span>
-            <div ng-include="'views/header/header.html'"></div>
-
-            <span id="portfolio"></span>
-            <div ng-include="'views/portfolio/portfolio.html'"></div>
-
-            <div ng-include="'views/footer/footer.html'"></div>
-        </main>
-    </div>
+    <div ng-include="'views/layout/layout.html'"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

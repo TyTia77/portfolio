@@ -1,11 +1,7 @@
-@import "../../style/variables.scss";
-
 .portfolio-header{
-    position: relative;
-    top: 25px;
     font-family: Comic;
     color: lightgrey !important;
-    text-transform: capitalize;
+    @include section-header;
 }
 
 .squares{

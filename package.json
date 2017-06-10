@@ -23,9 +23,11 @@
     "gulp-jsonminify": "^1.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.8",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "sass-glob-importer": "^1.0.1"
   },
   "bugs": {
     "url": "https://github.com/TyTia77/portfolio/issues"

@@ -1,15 +1,15 @@
+// put scrollreveal on global scope
+window.sr = ScrollReveal({
+    reset: true
+});
+
 var app = angular.module('app', []);
 
 // apply after dom has be rendered
 app.directive('scrollEffect', ['$timeout', function($timeout){
     return {
         link: function(){
-
             $timeout(function(){
-                window.sr = ScrollReveal({
-                    reset: true
-                });
-
                 sr.reveal('.portfolio-header', {
                     origin: 'top',
                     viewFactor: .1,
@@ -46,6 +46,35 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
         }
     }
 }]);
+
+app.directive('skillLoad', ['$timeout', function($timeout){
+    return {
+        link: function(){
+            $timeout(function(){
+                sr.reveal('.skill-container>h1', {
+                    origin: 'top',
+                    viewFactor: .1,
+                    distance: '100px',
+                    opacity: 0,
+                    duration: 700,
+                    scale: .1,
+                    mobile: true
+                })
+
+                sr.reveal('.skill-row div', {
+                    origin: 'bottom',
+                    viewFactor: .2,
+                    distance: '100px',
+                    opacity: 0,
+                    duration: 700,
+                    scale: .1,
+                    mobile: true
+                })
+            })
+        }
+    }
+}]);
+
 
 app.controller('ctrl', ['$scope', function($scope){
     // $scope.projects = [

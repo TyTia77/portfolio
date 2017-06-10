@@ -1,0 +1,19 @@
+.skill-container{
+
+
+
+    h1{
+        @include section-header;
+    }
+
+    .row{
+        // display: block;
+        // min-height: 100%;
+
+        div{
+            // height: 100%;
+            // border: 1px solid red;
+            height: 200px;
+        }
+    }
+}
