@@ -13,6 +13,17 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
                     mobile: true
                 })
 
+                sr.reveal('.portfolio-container .line', {
+                    origin: 'center',
+                    viewFactor: .1,
+                    opacity: 0,
+                    duration: 2000,
+                    scale: 0.1,
+                    rotate: { x: 0, y: 90, z: 0 },
+                    reset: false,
+                    mobile: true
+                })
+
                 sr.reveal('.squares', {
                     origin: 'left',
                     viewFactor: .3,

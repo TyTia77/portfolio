@@ -1,7 +1,7 @@
 app.controller('skillCtrl', ['$scope', function($scope){
 
     $scope.items = [
-        {label: 'HTML', scale: '.8', category: 'language'},
+        {label: 'HTML', scale: '.75', category: 'language'},
         {label: 'CSS', category: 'language'},
         {label: 'javascript', scale: '.8', category: 'language'},
         {label: 'SCSS', category: 'language'},

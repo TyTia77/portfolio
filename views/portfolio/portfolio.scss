@@ -3,6 +3,11 @@
     @include section-header;
 }
 
+.line{
+    @include header-line;
+    width: 100px;
+}
+
 .squares{
     text-align: center;
     height: 300px;
