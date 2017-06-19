@@ -1,5 +1,10 @@
 @mixin section-header{
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: 'Andika', sans-serif;
     text-align: center;
+}
+
+@mixin section-sub-header{
+    font-family: "Trebuchet MS";
+    text-transform: capitalize;
 }

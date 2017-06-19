@@ -3,100 +3,14 @@ window.sr = ScrollReveal({
     reset: true
 });
 
-var app = angular.module('app', []);
+// disable scrolling
+setTimeout(function(){
+    $('body').css('overflow-y', 'visible');
+}, 7000);
 
-// apply after dom has be rendered
-app.directive('scrollEffect', ['$timeout', function($timeout){
-    return {
-        link: function(){
-            $timeout(function(){
-                sr.reveal('.portfolio-header', {
-                    origin: 'top',
-                    viewFactor: .1,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
-                })
+var app = angular.module('app', ['angular.filter']);
 
-                sr.reveal('.squares', {
-                    origin: 'left',
-                    viewFactor: .3,
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
-                })
-
-                sr.reveal('.project-card>h3', {
-                    origin: 'bottom',
-                    viewFactor: .01,
-                    distance: '50px',
-                    opacity: 0,
-                    delay: 300,
-                    duration: 800,
-                    reset: false,
-                    mobile: true
-                })
-            }, 0);
-
-        }
-    }
-}]);
-
-app.directive('skillLoad', ['$timeout', function($timeout){
-    return {
-        link: function(){
-            $timeout(function(){
-                sr.reveal('.skill-container>h1', {
-                    origin: 'top',
-                    viewFactor: .1,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    mobile: true
-                })
-
-                sr.reveal('.skill-row div', {
-                    origin: 'bottom',
-                    viewFactor: .2,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    mobile: true
-                })
-            })
-        }
-    }
-}]);
-
-
+// global controller
 app.controller('ctrl', ['$scope', function($scope){
-    // $scope.projects = [
-    //     {img: 'images/Capture.PNG', title: 'simon game', id: 'simon-game', color: '#fff'},
-    //     {img: 'images/Capture1.PNG', title: 'tic tac toe game', id: 'tictactoe', color: '#162924'},
-    //     {img: 'images/Capture2.PNG', title: 'quote generater', id: 'quotes', color: '#E74C3C'},
-    //     {img: 'images/Capture3.PNG', title: 'twitch stream viewer', id: 'twitch-streams', color: '#fff'},
-    //     {img: 'images/Capture4.PNG', title: 'weather app', id: 'weatherapp', color: '#fff'},
-    //     {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
-    //     {img: 'images/Capture6.PNG', title: 'pomodoro clock', id: 'pomodoro-clock', color: '#2C3E50'},
-    //     {img: 'images/Capture7.PNG', title: 'calculator', id: 'calculator', color: '#fff'}
-    // ];
-
-    $scope.projects = [
-        {img: 'images/Capture.PNG', title: 'simon game', id: 'simon-game', color: '#fff'},
-        {img: 'images/Capture1.PNG', title: 'tic tac toe game', id: 'tictactoe', color: '#162924'},
-        {img: 'images/Capture9.PNG', title: 'calculator', id: 'calculator', color: '#fff'},
-        {img: 'images/Capture2.PNG', title: 'quote generater', id: 'quotes', color: '#E74C3C'},
-        {img: 'images/Capture8.PNG', title: 'twitch stream viewer', id: 'twitch-streams', color: '#fff'},
-        {img: 'images/Capture5.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
-        {img: 'images/Capture4.PNG', title: 'weather app', id: 'weatherapp', color: '#0262B6'}
-
-    ];
 
 }]);

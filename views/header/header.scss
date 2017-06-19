@@ -47,6 +47,7 @@
             position: relative;
             top: 15px;
             opacity: 0;
+            @include section-sub-header;
             animation: fade 1.5s 3s ease forwards;
         }
 

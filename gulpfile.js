@@ -48,7 +48,7 @@ gulp.task('buildcss', () => {
 //NOTE javascript
 gulp.task('buildjs', () => {
     return gulp
-        .src(['views/**/*.+(js)', 'js/**/*.+(js)'])
+        .src(['views/**/*.+(js)', 'js/script.js', 'js/directives/*.+(js)', 'js/controllers/*.+(js)'])
 	   .pipe(babel({presets: ['es2015']}))
         .pipe(concat('script.min.js'))
         .pipe(uglify())
