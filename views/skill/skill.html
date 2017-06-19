@@ -1,0 +1,89 @@
+<div class="container-fluid skill-container" skill-load style="background-color: #fff">
+    <h1>skills</h1>
+    <span class="line">&nbsp;</span>
+
+    <div class="button-container" ng-click="handleClick($event)">
+        <!-- <button class="btn btn-danger btn-category">all</button> -->
+        <!-- <button class="btn btn-category">language</button>
+        <button class="btn btn-category">library</button>
+        <button class="btn btn-category">framework</button>
+        <button class="btn btn-category">package manager</button>
+        <button class="btn btn-category">build system</button>
+        <button class="btn btn-category">version control</button> -->
+
+        <button class="btn btn-category ng-class:{'btn-danger':$first}" ng-repeat="cat in items | unique: 'category' | orderBy:'category'">{{cat.category}}</button>
+    </div>
+
+    <div class="row text-center skill-row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="i in items | orderBy: 'label' | filter: filterList">
+            <img src="{{getImage(i.label)}}" style="{{getStyle(i.scale)}}">
+            <h3>{{i.label}}</h3>
+        </div>
+        <!-- <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/html1.png" alt="" style="transform: scale(.8, .8)">
+            <h3>HTML</h3>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/css.png" alt="">
+            <h3>CSS</h3>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/js.png" alt="" style="transform: scale(.8, .8)">
+
+            <h3>javascript</h3>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/sass.png" alt="">
+
+            <h3>SCSS</h3></div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/boot.png" alt="">
+            <h3>bootstrap</h3>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/responsive.png" alt="">
+
+            <h3>responsive</h3> </div>
+
+
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/jquery.png" alt="" style="transform: scale(.7, .7)">
+            <h3>JQuery</h3>
+
+        </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/angular.png" alt="">
+            <h3>angularJS</h3>
+
+        </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/poly.png" alt="">
+
+            <h3>polymer</h3></div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/npm.png" alt="">
+
+            <h3>NPM</h3> </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/gulp6.png" alt="">
+
+            <h3>gulp</h3> </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/bower.png" alt="">
+
+            <h3>bower</h3> </div>
+        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+            <img src="images/icons/github.png" alt="" style="transform: scale(.95, .95)">
+
+            <h3>git hub</h3> </div>
+
+            <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+                <img src="images/icons/bitbucket1.png" alt="">
+                <h3>bit bucket</h3>
+            </div>
+            <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+                <img src="images/icons/source.png" alt="">
+                <h3>source tree</h3>
+            </div> -->
+    </div>
+</div>

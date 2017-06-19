@@ -2,4 +2,5 @@ footer{
     height: 50px;
     color: #fff;
     text-align: center;
+    @include section-sub-header;
 }

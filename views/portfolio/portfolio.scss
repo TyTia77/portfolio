@@ -1,11 +1,11 @@
-@import "../../style/variables.scss";
-
 .portfolio-header{
-    position: relative;
-    top: 25px;
-    font-family: Comic;
     color: lightgrey !important;
-    text-transform: capitalize;
+    @include section-header;
+}
+
+.line{
+    @include header-line;
+    width: 100px;
 }
 
 .squares{
@@ -83,10 +83,9 @@
 
                             a{
                                 pointer-events: none;
-                                text-transform: capitalize;
                                 transition-duration: .2s;
                                 color: lightgrey;
-                                font-family: Comic;
+                                @include section-sub-header;
 
                                 &:visited, &:active, &:focus{
                                     text-decoration: none;
@@ -110,9 +109,7 @@
 
 
         h3{
-            text-transform: capitalize;
-            color: #fff;
-            font-family: Comic;
+            @include section-sub-header;
             color: lightgrey;
         }
     }

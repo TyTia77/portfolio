@@ -1,5 +1,3 @@
-@import "../../style/variables.scss";
-
 .header-container{
     position: relative;
     height: 100vh;
@@ -25,19 +23,18 @@
         margin: auto;
         text-align: center;
 
+        h1, h3{
+        }
+
         h1{
             opacity: 0;
             animation: fade 1s 1s ease forwards;
+            font-family: 'Andika', sans-serif;
         }
 
         .line{
-            display: block;
-            position: relative;
-            top: 10px;
-            margin: 0 auto;
-            height: 3px;
+            @include header-line;
             width: 0;
-            background-color: $red;
             animation: grow 1s 2s ease forwards;
         }
 
@@ -45,16 +42,35 @@
             position: relative;
             top: 15px;
             opacity: 0;
+            @include section-sub-header;
             animation: fade 1.5s 3s ease forwards;
         }
 
         button{
-            margin-top: 40px;
+            margin-top: 30px;
             opacity: 0;
             animation: scale .7s 5s ease forwards;
 
             &:focus{
                 outline: none;
+            }
+        }
+
+        .arrow-container{
+            margin-top: 30px;
+            opacity: 0;
+            animation: scale .7s 5s ease forwards;
+            color: $red;
+
+
+            div{
+                position: relative;
+                font-size: 2em;
+                animation: jump 1.3s 7s ease-in infinite forwards;
+
+                &:nth-child(2){
+                    top: -30px;
+                }
             }
         }
 
@@ -75,6 +91,14 @@
 @keyframes blur {
     0% {filter: blur(0)}
     100% {filter: blur(20px)}
+}
+
+@keyframes jump {
+    0% {transform: translateY(-30px)}
+    25% {transform: translateY(0)}
+    50% {transform: translateY(-10px)}
+    75% {transform: translateY(0)}
+    100% {transform: translateY(-10px);}
 }
 
 @keyframes fade {
