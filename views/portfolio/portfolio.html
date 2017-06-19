@@ -12,7 +12,7 @@
                 <div style="background-color: {{project.color}}">
                     <!-- <img src="{{project.img}}"></img> -->
                     <!-- <div class="project-image" style="background-image: url({{project.img}}); background-color: {{project.color}}"> -->
-                    <div class="project-image" style="{{getImage(project.img, project.color)}}">
+                    <div class="project-image" ng-attr-style="{{getImage(project.img, project.color)}}">
                         <div class="hover-detail">
                             <!-- <h2 class="text-capitalize">{{project.title}}</h2> -->
                             <h3><a href="https://github.com/TyTia77/{{project.id}}" target="_blank">view source code</a></h3>
