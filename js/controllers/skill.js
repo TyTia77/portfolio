@@ -49,4 +49,21 @@ app.controller('skillCtrl', ['$scope', function($scope){
         }
     }
 
+    $scope.testclick = function(e){
+        var $grid = $('.grid').isotope({
+            // options
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows'
+        });
+
+        var dataset = e.target.dataset.filter;
+
+        if(dataset){
+            console.log(e.target.dataset.filter);
+            console.log($grid);
+            console.log($(dataset));
+            $grid.isotope({ filter: dataset });
+        }
+    }
+
 }]);
