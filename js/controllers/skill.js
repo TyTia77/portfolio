@@ -19,7 +19,6 @@ app.controller('skillCtrl', ['$scope', function($scope){
     ];
 
     $scope.convertButton = function(value, applyDot){
-        console.log(value);
         if(value === 'all'){
             return '*';
         } else {
@@ -38,36 +37,22 @@ app.controller('skillCtrl', ['$scope', function($scope){
         return 'images/icons/' +label +'.png';
     }
 
-    $scope.handleClick = function(ev){
-
-        if (ev.target.classList.contains('btn-category')){
-
-            $('.btn-category').removeClass('btn-danger');
-            ev.target.classList.add('btn-danger');
-
-
-        }
-    }
-
-    $scope.testclick = function(e){
+    $scope.handleClick = function(e){
         var $grid = $('.grid').isotope({
             // options
             itemSelector: '.element-item',
             layoutMode: 'fitRows'
         });
 
-        if (e.target.classList.contains('btn-category')){
-
-            $('.btn-category').removeClass('btn-danger');
-            e.target.classList.add('btn-danger');
-        }
-
         var dataset = e.target.dataset.filter;
 
         if(dataset){
-            console.log(e.target.dataset.filter);
-            console.log($grid);
-            console.log($(dataset));
+
+            if (e.target.classList.contains('btn-category')){
+
+                $('.btn-category').removeClass('btn-danger');
+                e.target.classList.add('btn-danger');
+            }
 
             $grid.isotope({ filter: dataset });
         }
