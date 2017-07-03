@@ -18,6 +18,15 @@ app.controller('skillCtrl', ['$scope', function($scope){
         {label: 'source tree', category: 'version control'},
     ];
 
+    $scope.convertButton = function(value, applyDot){
+        console.log(value);
+        if(value === 'all'){
+            return '*';
+        } else {
+            value = value.replace(' ', '-');
+            return applyDot ? '.' +value : value;
+        }
+    }
 
     $scope.getStyle = function(value){
         value = value ? value +', ' +value : '1, 1';
@@ -32,20 +41,11 @@ app.controller('skillCtrl', ['$scope', function($scope){
     $scope.handleClick = function(ev){
 
         if (ev.target.classList.contains('btn-category')){
-            var val = ev.target.innerHTML;
 
             $('.btn-category').removeClass('btn-danger');
             ev.target.classList.add('btn-danger');
 
-            switch (val){
-                case 'all':
-                    $scope.filterList = '';
-                    break;
 
-                default:
-                    $scope.filterList = val;
-                    break;
-            }
         }
     }
 
@@ -56,12 +56,22 @@ app.controller('skillCtrl', ['$scope', function($scope){
             layoutMode: 'fitRows'
         });
 
+        if (e.target.classList.contains('btn-category')){
+
+            $('.btn-category').removeClass('btn-danger');
+            e.target.classList.add('btn-danger');
+        }
+
         var dataset = e.target.dataset.filter;
 
         if(dataset){
             console.log(e.target.dataset.filter);
             console.log($grid);
             console.log($(dataset));
+
+            // dataset = dataset === '*' ? '*' : '.' +dataset;
+
+
             $grid.isotope({ filter: dataset });
         }
     }

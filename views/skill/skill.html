@@ -1,24 +1,22 @@
-<div class="container-fluid skill-container" skill-load style="background-color: #fff">
+<div class="container-fluid skill-container"
+     skill-load
+     style="background-color: #fff">
     <h1>skills</h1>
     <span class="line">&nbsp;</span>
 
-    <div class="button-container" ng-click="handleClick($event)">
-        <button class="btn btn-category ng-class:{'btn-danger':$first}" ng-repeat="cat in items | unique: 'category' | orderBy:'category'">{{cat.category}}</button>
-    </div>
-
-    <div class="button-group filter-button-group" ng-click="testclick($event)">
-        <button data-filter="*">all</button>
-        <button data-filter=".language">language</button>
-        <button data-filter=".library">library</button>
-        <button data-filter=".framework">framework</button>
-        <button data-filter="package manager">package manger</button>
-        <button data-filter="build system">build system</button>
-        <button data-filter="version control">version control</button>
+    <div class="button-container button-group filter-button-group"
+         ng-click="testclick($event)">
+        <button class="btn btn-category ng-class:{'btn-danger':$first}"
+                data-filter="{{convertButton(cat.category, true)}}"
+                ng-repeat="cat in items | unique: 'category' | orderBy: 'category'">{{cat.category}}</button>
     </div>
 
     <div class="row text-center skill-row grid">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 element-item" ng-class="i.category" ng-repeat="i in items | orderBy: 'label' | filter: filterList">
-            <img src="{{getImage(i.label)}}" style="{{getStyle(i.scale)}}">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 element-item"
+             ng-class="convertButton(i.category, false)"
+             ng-repeat="i in items | orderBy: 'label' | filter: filterList">
+            <img src="{{getImage(i.label)}}"
+                 style="{{getStyle(i.scale)}}">
             <h3>{{i.label}}</h3>
         </div>
     </div>
