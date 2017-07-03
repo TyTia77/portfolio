@@ -69,9 +69,6 @@ app.controller('skillCtrl', ['$scope', function($scope){
             console.log($grid);
             console.log($(dataset));
 
-            // dataset = dataset === '*' ? '*' : '.' +dataset;
-
-
             $grid.isotope({ filter: dataset });
         }
     }
