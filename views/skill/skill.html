@@ -5,7 +5,7 @@
     <span class="line">&nbsp;</span>
 
     <div class="button-container button-group filter-button-group"
-         ng-click="testclick($event)">
+         ng-click="handleClick($event)">
         <button class="btn btn-category ng-class:{'btn-danger':$first}"
                 data-filter="{{convertButton(cat.category, true)}}"
                 ng-repeat="cat in items | unique: 'category' | orderBy: 'category'">{{cat.category}}</button>

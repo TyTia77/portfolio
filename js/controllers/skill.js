@@ -38,18 +38,7 @@ app.controller('skillCtrl', ['$scope', function($scope){
         return 'images/icons/' +label +'.png';
     }
 
-    $scope.handleClick = function(ev){
-
-        if (ev.target.classList.contains('btn-category')){
-
-            $('.btn-category').removeClass('btn-danger');
-            ev.target.classList.add('btn-danger');
-
-
-        }
-    }
-
-    $scope.testclick = function(e){
+    $scope.handleClick = function(e){
         var $grid = $('.grid').isotope({
             // options
             itemSelector: '.element-item',
