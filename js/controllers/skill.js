@@ -19,7 +19,6 @@ app.controller('skillCtrl', ['$scope', function($scope){
     ];
 
     $scope.convertButton = function(value, applyDot){
-        console.log(value);
         if(value === 'all'){
             return '*';
         } else {
@@ -45,18 +44,15 @@ app.controller('skillCtrl', ['$scope', function($scope){
             layoutMode: 'fitRows'
         });
 
-        if (e.target.classList.contains('btn-category')){
-
-            $('.btn-category').removeClass('btn-danger');
-            e.target.classList.add('btn-danger');
-        }
-
         var dataset = e.target.dataset.filter;
 
         if(dataset){
-            console.log(e.target.dataset.filter);
-            console.log($grid);
-            console.log($(dataset));
+
+            if (e.target.classList.contains('btn-category')){
+
+                $('.btn-category').removeClass('btn-danger');
+                e.target.classList.add('btn-danger');
+            }
 
             $grid.isotope({ filter: dataset });
         }
