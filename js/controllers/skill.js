@@ -18,6 +18,14 @@ app.controller('skillCtrl', ['$scope', function($scope){
         {label: 'source tree', category: 'version control'},
     ];
 
+    $scope.convertButton = function(value, applyDot){
+        if(value === 'all'){
+            return '*';
+        } else {
+            value = value.replace(' ', '-');
+            return applyDot ? '.' +value : value;
+        }
+    }
 
     $scope.getStyle = function(value){
         value = value ? value +', ' +value : '1, 1';
@@ -29,23 +37,24 @@ app.controller('skillCtrl', ['$scope', function($scope){
         return 'images/icons/' +label +'.png';
     }
 
-    $scope.handleClick = function(ev){
+    $scope.handleClick = function(e){
+        var $grid = $('.grid').isotope({
+            // options
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows'
+        });
 
-        if (ev.target.classList.contains('btn-category')){
-            var val = ev.target.innerHTML;
+        var dataset = e.target.dataset.filter;
 
-            $('.btn-category').removeClass('btn-danger');
-            ev.target.classList.add('btn-danger');
+        if(dataset){
 
-            switch (val){
-                case 'all':
-                    $scope.filterList = '';
-                    break;
+            if (e.target.classList.contains('btn-category')){
 
-                default:
-                    $scope.filterList = val;
-                    break;
+                $('.btn-category').removeClass('btn-danger');
+                e.target.classList.add('btn-danger');
             }
+
+            $grid.isotope({ filter: dataset });
         }
     }
 

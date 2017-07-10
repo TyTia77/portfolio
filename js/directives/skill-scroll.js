@@ -35,9 +35,9 @@ app.directive('skillLoad', ['$timeout', function($timeout){
                     mobile: true
                 })
 
-                sr.reveal('.skill-row div', {
+                sr.reveal('.skill-row', {
                     origin: 'bottom',
-                    viewFactor: .2,
+                    viewFactor: .1,
                     distance: '100px',
                     opacity: 0,
                     duration: 700,

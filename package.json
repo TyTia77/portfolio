@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,7 @@
     "gulp-sass-glob": "^1.0.8",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.8",
-    "gulp-watch": "^4.3.11",
-    "sass-glob-importer": "^1.0.1"
+    "gulp-watch": "^4.3.11"
   },
   "bugs": {
     "url": "https://github.com/TyTia77/portfolio/issues"
