@@ -10,6 +10,8 @@ const uglifycss = require('gulp-uglifycss');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const jsonminify = require('gulp-jsonminify');
+const server = require('gulp-server-livereload');
+
 // const pump = require('pump');
 // gulp-minify-inline
 // gulp-htmlmin
@@ -42,30 +44,38 @@ gulp.task('buildcss', () => {
         }))
         .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
         .pipe(concat('style.min.css'))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'))
 });
 
 //NOTE javascript
 gulp.task('buildjs', () => {
     return gulp
         .src(['views/**/*.+(js)', 'js/script.js', 'js/directives/*.+(js)', 'js/controllers/*.+(js)'])
-	   .pipe(babel({presets: ['es2015']}))
+	    .pipe(babel({presets: ['es2015']}))
         .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist'))
 });
 
+//NOTE webserver
+gulp.task('webserver', () => {
+  gulp.src('./')
+    .pipe(server({
+      livereload: true,
+      open: true,
+      port: 8080
+    }));
+});
 
 //NOTE watch
 gulp.task('watch', () => {
     gulp.watch(
         ['./style/**/*.+(scss|css)', './views/**/*.+(scss|css)'],
-        ['buildcss']
-    );
+        ['buildcss']);
 
     gulp.watch(
         ['./js/**/*.js', './views/**/*.js'],
         ['buildjs']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'webserver']);
