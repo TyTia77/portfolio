@@ -16,6 +16,9 @@ app.controller('skillCtrl', ['$scope', function($scope){
         {label: 'git hub', scale: '.95', category: 'version control'},
         {label: 'bit bucket', category: 'version control'},
         {label: 'source tree', category: 'version control'},
+        {label: 'git', category: 'version control'},
+        {label: 'photoshop', category: 'all'},
+        {label: 'sub version', category: 'version control'}
     ];
 
     $scope.convertButton = function(value, applyDot){
