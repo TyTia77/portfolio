@@ -18,8 +18,8 @@ app.controller('projectCtrl', ['$scope', function($scope){
         {img: 'images/project/twitch-stream-viewer.PNG', title: 'twitch stream viewer', id: 'twitch-streams', color: '#fff'},
         {img: 'images/project/wikipedia-search.PNG', title: 'wikipedia search', id: 'wiki-viewer', color: '#092B40'},
         {img: 'images/project/weather-app.PNG', title: 'weather app', id: 'weatherapp', color: '#0262B6'},
-        {img: 'images/project/todo.PNG', title: 'todo app', id: 'todo', color: '#fff'},
-        {img: 'images/project/movie-db.PNG', title: 'movieDB', id: 'movieDB', color: '#000', progress: true }
+        {img: 'images/project/todo.png', title: 'todo app', id: 'todo', color: '#fff'},
+        {img: 'images/project/movie-db.png', title: 'movieDB', id: 'movieDB', color: '#000', progress: true }
     ];
 
     $scope.getImage = function(img, color){
