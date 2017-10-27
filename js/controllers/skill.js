@@ -20,8 +20,6 @@ app.controller('skillCtrl', ['$scope', function($scope){
         {label: 'sub version', category: 'version control'}
     ];
 
-    // {label: 'photoshop', category: 'all'},
-
     $scope.convertButton = function(value, applyDot){
         if(value === 'all'){
             return '*';
@@ -38,7 +36,9 @@ app.controller('skillCtrl', ['$scope', function($scope){
     $scope.getStyle = function(value){
 
         // if scale prop valid, else return standard scale of 1,1
-        value = value ? value +', ' +value : '1, 1';
+        value = value 
+            ? value +', ' +value 
+            : '1, 1';
         return 'transform: scale(' +value +')';
     }
 
