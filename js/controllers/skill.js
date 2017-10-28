@@ -48,7 +48,7 @@ app.controller('skillCtrl', ['$scope', function($scope){
     }
 
     $scope.handleClick = function(e){
-        var $grid = $('.grid').isotope({
+        var $grid = $('.skill-grid').isotope({
             // options
             itemSelector: '.element-item',
             layoutMode: 'fitRows'
@@ -59,9 +59,9 @@ app.controller('skillCtrl', ['$scope', function($scope){
         if(dataset){
 
             // toggle active button state
-            if (e.target.classList.contains('btn-category')){
+            if (e.target.classList.contains('btn-skills')){
 
-                $('.btn-category').removeClass('btn-danger');
+                $('.btn-skills').removeClass('btn-danger');
                 e.target.classList.add('btn-danger');
             }
 

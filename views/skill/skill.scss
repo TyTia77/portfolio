@@ -10,18 +10,10 @@
     }
 
     .button-container{
-        margin: 40px auto;
-        text-align: center;
-
-        .btn-category{
-            text-transform: capitalize;
-            transition-duration: .2s;
-            margin: 5px;
-
-            &:focus{
-                outline: none;
-            }
-        }
+        @include category-container;
+        .btn-skills{
+            @include category-button;
+       }
     }
 
     .row{
