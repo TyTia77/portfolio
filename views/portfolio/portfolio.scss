@@ -8,6 +8,15 @@
     width: 100px;
 }
 
+.button-container{
+    @include category-container;
+    margin-bottom: -10px;
+
+    .btn-portfolio{
+        @include category-button;
+    }
+}
+
 .squares{
     text-align: center;
     height: 300px;

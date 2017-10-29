@@ -1,9 +1,20 @@
 <div class="container-fluid portfolio-container"  scroll-effect>
     <h1 class="text-center portfolio-header">projects</h1>
     <span class='line'></span>
+    
+    <div class="button-container button-group filter-button-group"
+     ng-click="handleClick($event)">
+        <button class="btn btn-portfolio ng-class:{'btn-danger':$first}"
+                data-filter="{{convertButton(cat.name, true)}}"
+                ng-repeat="cat in category | unique: 'name' | orderBy: 'name'">{{cat.name}}</button>
+    </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 squares" ng-repeat="project in projects">
+    <div class="row project-grid">
+        <div 
+            class="col-xs-12 col-sm-6 col-md-4 squares" 
+            ng-repeat="project in projects"
+            ng-class="convertButton(project.category, false)">
+
             <div class="project-card">
                 <span></span>
                 <span></span>
@@ -15,8 +26,8 @@
                     <div class="project-image" ng-attr-style="{{getImage(project.img, project.color)}}">
                         <div class="hover-detail">
                             <!-- <h2 class="text-capitalize">{{project.title}}</h2> -->
-                            <h3><a href="https://github.com/TyTia77/{{project.id}}" target="_blank">view source code</a></h3>
-                            <h3><a href="https://tytia77.github.io/{{project.id}}" target="_blank">view live</a></h3>
+                            <h3><a href="https://github.com/TyTia77/{{project.source}}" target="_blank">view source code</a></h3>
+                            <h3><a href="https://tytia77.github.io/{{project.live}}" target="_blank">view live</a></h3>
                             <h3 ng-show={{project.progress}}
                                 style="color: red">
                                     <ion-icon class="ion-alert-circled"></ion-icon>
