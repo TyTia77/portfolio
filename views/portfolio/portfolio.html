@@ -4,7 +4,7 @@
     
     <div class="button-container button-group filter-button-group"
      ng-click="handleClick($event)">
-        <button class="btn btn-portolio ng-class:{'btn-danger':$first}"
+        <button class="btn btn-portfolio ng-class:{'btn-danger':$first}"
                 data-filter="{{convertButton(cat.name, true)}}"
                 ng-repeat="cat in category | unique: 'name' | orderBy: 'name'">{{cat.name}}</button>
     </div>
@@ -26,8 +26,8 @@
                     <div class="project-image" ng-attr-style="{{getImage(project.img, project.color)}}">
                         <div class="hover-detail">
                             <!-- <h2 class="text-capitalize">{{project.title}}</h2> -->
-                            <h3><a href="https://github.com/TyTia77/{{project.id}}" target="_blank">view source code</a></h3>
-                            <h3><a href="https://tytia77.github.io/{{project.id}}" target="_blank">view live</a></h3>
+                            <h3><a href="https://github.com/TyTia77/{{project.source}}" target="_blank">view source code</a></h3>
+                            <h3><a href="https://tytia77.github.io/{{project.live}}" target="_blank">view live</a></h3>
                             <h3 ng-show={{project.progress}}
                                 style="color: red">
                                     <ion-icon class="ion-alert-circled"></ion-icon>
