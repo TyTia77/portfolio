@@ -21,7 +21,7 @@ gulp.task('buildcss', () => {
         }))
         .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
         .pipe(concat('style.min.css'))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('buildjs', () => {
@@ -36,15 +36,15 @@ gulp.task('buildjs', () => {
 	    .pipe(babel({presets: ['es2015']}))
         .pipe(concat('script.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('webserver', () => {
   gulp.src('./')
     .pipe(server({
       livereload: true,
-      open: true,
-      port: 8000
+      open: false,
+      port: 9000
     }));
 });
 
