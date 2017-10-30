@@ -43,7 +43,7 @@ gulp.task('webserver', () => {
   gulp.src('./')
     .pipe(server({
       livereload: true,
-      open: false,
+      open: true,
       port: 9000
     }));
 });
