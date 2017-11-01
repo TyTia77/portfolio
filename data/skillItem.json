@@ -1,0 +1,77 @@
+[
+{
+    "label": "HTML",
+    "scale": ".75",
+    "category": "language"
+},
+{
+    "label": "CSS",
+    "category": "language"
+},
+{
+    "label": "javascript",
+    "scale": ".8",
+    "category": "language"
+},
+{
+    "label": "SCSS",
+    "category": "language"
+},
+{
+    "label": "bootstrap",
+    "category": "library"
+},
+{
+    "label": "responsive",
+    "category": "all"
+},
+{
+    "label": "JQuery",
+    "scale": ".7",
+    "category": "library"
+},
+{
+    "label": "angularJS",
+    "category": "framework"
+},
+{
+    "label": "polymer",
+    "category": "framework"
+},
+{
+    "label": "NPM",
+    "category": "package manager"
+},
+{
+    "label": "gulp",
+    "category": "build system"
+},
+{
+    "label": "bower",
+    "category": "package manager"
+},
+{
+    "label": "git hub",
+    "scale": ".95",
+    "category": "version control"
+},
+{
+    "label": "bit bucket",
+    "category": "version control"
+},
+{
+    "label": "source tree",
+    "category": "version control"
+},
+{
+    "label": "git",
+    "category": "version control"
+},
+{
+    "label": "sub version",
+    "category": "version control"
+},
+{
+    "label": "photoshop",
+    "category": "all"
+}]

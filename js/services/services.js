@@ -1,89 +1,22 @@
-app.service('myService', function(){
+app.factory('api', ['$http', function($http){
+    var api = {};
 
-	// data
-	this.projectsItems = [{
-            img: 'images/project/simon-game.PNG',
-            title: 'simon game',
-            source: 'simon-game',
-            live: 'simon-game',
-            color: '#fff',
-            category: 'angularJS'
-        },
-        {
-            img: 'images/project/movie-db.png',
-            title: 'movieDB',
-            source: 'movieDB/tree/issues',
-            live: 'movieDB',
-            color: '#000',
-            category: 'react',
-            progress: true
-        },
-        {
-            img: 'images/project/tic-tac-toe-game.PNG',
-            title: 'tic tac toe game',
-            source: 'tictactoe',
-            live: 'tictactoe',
-            color: '#162924',
-            category: 'angularJS'
-        },
-        {
-            img: 'images/project/weather-app.PNG',
-            title: 'weather app',
-            source: 'weatherapp',
-            live: 'weatherapp',
-            color: '#0262B6',
-            category: 'angularJS'
-        },
-        {
-            img: 'images/project/todo.png',
-            title: 'todo app',
-            source: 'todo',
-            live: 'todo',
-            color: '#fff',
-            category: 'react'
-        },
-        {
-            img: 'images/project/wikipedia-search.PNG',
-            title: 'wikipedia search',
-            source: 'wiki-viewer',
-            live: 'wiki-viewer',
-            color: '#092B40',
-            category: 'angularJS'
-        },
-        {
-            img: 'images/project/twitch-stream-viewer.PNG',
-            title: 'twitch stream viewer',
-            source: 'twitch-streams',
-            live: 'twitch-streams',
-            color: '#fff',
-            category: 'angularJS'
-        },
-        {
-            img: 'images/project/calculator.PNG',
-            title: 'calculator',
-            source: 'calculator',
-            live: 'calculator',
-            color: '#fff',
-            category: 'angularJS'
-        },
-        {
-            img: 'images/project/quote-generater.PNG',
-            title: 'quote generater',
-            source: 'quotes',
-            live: 'quotes',
-            color: '#E74C3C',
-            category: 'angularJS'
-        }
-    ];
+    api.getProjects = function(){
+        return $http.get('/data/projectItem.json');  
+    }
 
-    this.projectCategory = [{
-        name: 'react'
-    },{
-        name: 'angularJS'
-    },{
-        name: 'all'
-    }];
+    api.getProjectCategory = function(){
+        return $http.get('/data/projectCat.json');
+    }
 
+    api.getSkillItem = function(){
+        return $http.get('/data/skillItem.json');
+    }
+
+    return api;
+}]);
+
+app.service('myService',['api', function(api){
     this.skillItems = [
         {label: 'HTML', scale: '.75', category: 'language'},
         {label: 'CSS', category: 'language'},
@@ -107,8 +40,8 @@ app.service('myService', function(){
 
 
     // get data
-    this.getProjectItems = () => this.projectsItems;
-    this.getProjectCategory = () => this.projectCategory;
+    //this.getProjectItems = () => this.projectsItems;
+    //this.getProjectCategory = () => this.projectCategory;
     this.getSkillItems = () => this.skillItems.filter(item => item.label !== 'photoshop');
 
 
@@ -150,4 +83,4 @@ app.service('myService', function(){
             }
         }
     }
-});
+}]);
