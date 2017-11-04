@@ -6,7 +6,7 @@ window.sr = ScrollReveal({
 // disable scrolling
 setTimeout(function(){
     $('body').css('overflow-y', 'visible');
-}, 50);
+}, 7000);
 
 var app = angular.module('app', ['angular.filter']);
 
