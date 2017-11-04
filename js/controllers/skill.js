@@ -13,10 +13,7 @@ app.controller('skillCtrl', ['$scope', 'myService', ($scope, myService) => {
         return `transform: scale(${value})`;
     }
 
-    $scope.getImage = label => {
-        label = label.replace(' ', '').toLowerCase();
-        return `images/icons/${label}.png`;
-    }
+    $scope.getImage = label => `images/icons/${label.replace(' ', '').toLowerCase()}.png`;
 
     $scope.handleClick = e => myService.handleButton('.skill-grid','.element-item')(e)('btn-skills');
 
