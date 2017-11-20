@@ -1,5 +1,6 @@
 app.directive('skillLoad', ['$timeout', function($timeout){
     return {
+        restrict: 'A',
         link: function(){
             $timeout(function(){
                 sr.reveal('.skill-container>h1', {

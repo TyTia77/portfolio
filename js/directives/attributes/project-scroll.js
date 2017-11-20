@@ -1,5 +1,6 @@
 app.directive('scrollEffect', ['$timeout', function($timeout){
     return {
+        restrict: 'A',
         link: function(){
             $timeout(function(){
                 sr.reveal('.portfolio-header', {
@@ -33,27 +34,6 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
                     reset: false,
                     mobile: true
                 })                
-
-                // sr.reveal('.squares', {
-                //     origin: 'left',
-                //     viewFactor: .3,
-                //     opacity: 0,
-                //     duration: 700,
-                //     scale: .1,
-                //     reset: false,
-                //     mobile: true
-                // })
-
-                // sr.reveal('.project-card>h3', {
-                //     origin: 'bottom',
-                //     viewFactor: .01,
-                //     distance: '50px',
-                //     opacity: 0,
-                //     delay: 300,
-                //     duration: 800,
-                //     reset: false,
-                //     mobile: true
-                // })
             }, 0);
 
         }
