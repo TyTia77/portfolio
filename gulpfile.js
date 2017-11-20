@@ -30,7 +30,7 @@ gulp.task('buildjs', () => {
                 'views/**/*.+(js)', 
                 'js/script.js', 
                 'js/services/**/*.js', 
-                'js/directives/*.+(js)', 
+                'js/directives/**/*.+(js)', 
                 'js/controllers/*.+(js)'
             ])
 	    .pipe(babel({presets: ['es2015']}))
