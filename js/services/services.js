@@ -106,11 +106,16 @@ app.service('myService', function(){
     ];
 
 
-    // get data
+    // get
     this.getProjectItems = () => this.projectsItems;
     this.getProjectCategory = () => this.projectCategory;
     this.getSkillItems = () => this.skillItems.filter(item => item.label !== 'photoshop');
-
+    this.getImage = label => `images/icons/${label.replace(' ', '').toLowerCase()}.png`;
+    this.getStyle = value => {
+            // if scale prop valid, else return standard scale of 1,1
+            value = value ? `${value},${value}` : `1, 1`;
+            return `transform: scale(${value})`;
+    }
 
     // functions
     this.convertButton = (value, applyDot) => {
