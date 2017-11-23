@@ -1,14 +1,7 @@
 <div class="container-fluid portfolio-container"  scroll-effect>
     <h1 class="text-center portfolio-header">projects</h1>
     <span class='line'></span>
-    
-    <div class="button-container button-group filter-button-group"
-     ng-click="handleClick($event)">
-        <button class="btn btn-portfolio ng-class:{'btn-danger':$first}"
-                data-filter="{{convertButton(cat.name, true)}}"
-                ng-repeat="cat in category | unique: 'name' | orderBy: 'name'">{{cat.name}}</button>
-    </div>
-
+    <button-comp items="category" class-list="classList"></button-comp>
     <div class="row project-grid">
         <project-item items="items"></project-item>
     </div>

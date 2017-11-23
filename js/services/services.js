@@ -77,11 +77,11 @@ app.service('myService', function(){
     ];
 
     this.projectCategory = [{
-        name: 'react'
+        category: 'react'
     },{
-        name: 'angularJS'
+        category: 'angularJS'
     },{
-        name: 'all'
+        category: 'all'
     }];
 
     this.skillItems = [

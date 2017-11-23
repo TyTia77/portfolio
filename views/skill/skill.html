@@ -3,14 +3,7 @@
      style="background-color: #fff">
     <h1>skills</h1>
     <span class="line"></span>
-
-    <div class="button-container button-group filter-button-group"
-         ng-click="handleClick($event)">
-        <button class="btn btn-skills ng-class:{'btn-danger':$first}"
-                data-filter="{{convertButton(cat.category, true)}}"
-                ng-repeat="cat in items | unique: 'category' | orderBy: 'category'">{{cat.category}}</button>
-    </div>
-
+    <button-comp items="items" class-list="classList"></button-comp>
     <div class="row text-center skill-row skill-grid">
         <skill-item items="items"></skill-item>
     </div>
