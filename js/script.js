@@ -3,6 +3,11 @@ window.sr = ScrollReveal({
     reset: true
 });
 
+// on refresh scroll to top
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0); 
+});
+
 // disable scrolling
 setTimeout(function(){
     $('body').css('overflow-y', 'visible');
