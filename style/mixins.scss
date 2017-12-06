@@ -24,6 +24,13 @@
 @mixin category-container{
     margin: 40px auto;
     text-align: center;
+    .btn {
+        background-color: lightgrey;
+    }
+
+    .btn-danger {
+        background-color: #d43f3a;
+    }
 }
 
 @mixin category-button{
