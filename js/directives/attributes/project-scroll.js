@@ -27,7 +27,7 @@ app.directive('scrollEffect', ['$timeout', function($timeout){
 
                 sr.reveal('.project-grid', {
                     origin: 'left',
-                    viewFactor: .3,
+                    viewFactor: .1,
                     opacity: 0,
                     duration: 700,
                     scale: .1,
