@@ -2,4 +2,5 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: $brown;
+    user-select: none;
 }

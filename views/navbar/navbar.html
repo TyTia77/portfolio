@@ -33,5 +33,17 @@
             'scrollTop': $(hash).offset().top
         }, 700);
         return false;
-    })
+    });
+
+    $('ul li').on('mouseover', function () {
+        if ($(window).width() > 768) {
+            $(this).addClass('animated infinite rubberBand').on('mouseout', function () {
+                let prevClass = $(this).attr('class').split(' ').filter(function(classes){
+                    return classes === 'active';
+                }) || '';
+                
+                $(this).attr('class', prevClass);
+            })
+        }
+    });
 </script>

@@ -124,6 +124,9 @@
             h3{
                 @include section-sub-header;
                 color: lightgrey;
+
+                // turns off subpixels, issues with font weight during animation
+                -webkit-font-smoothing: antialiased;
             }
         }
     }
