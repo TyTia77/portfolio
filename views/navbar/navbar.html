@@ -33,5 +33,16 @@
             'scrollTop': $(hash).offset().top
         }, 700);
         return false;
-    })
+    });
+
+    $('ul li').on('mouseover', function () {
+        if ($(window).width() > 768) {
+
+            let prevClass = $(this).attr('class') || '';
+
+            $(this).addClass('animated infinite rubberBand').on('mouseout', function () {
+                $(this).attr('class', prevClass);
+            })
+        }
+    });
 </script>
