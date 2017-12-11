@@ -37,10 +37,11 @@
 
     $('ul li').on('mouseover', function () {
         if ($(window).width() > 768) {
-
-            let prevClass = $(this).attr('class') || '';
-
             $(this).addClass('animated infinite rubberBand').on('mouseout', function () {
+                let prevClass = $(this).attr('class').split(' ').filter(function(classes){
+                    return classes === 'active';
+                }) || '';
+                
                 $(this).attr('class', prevClass);
             })
         }
