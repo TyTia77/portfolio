@@ -12,7 +12,7 @@ app.service('myService', function(){
         {
             img: 'images/project/movie-db.png',
             title: 'movieDB',
-            source: 'movieDB/tree/issues',
+            source: 'movieDB/tree/trunk',
             live: 'movieDB',
             color: '#000',
             category: 'react',
