@@ -24,6 +24,10 @@
 @mixin category-container{
     margin: 40px auto;
     text-align: center;
+
+    // turns off subpixels, issues with font weight during animation
+    -webkit-font-smoothing: antialiased;
+
     .btn {
         background-color: lightgrey;
     }
