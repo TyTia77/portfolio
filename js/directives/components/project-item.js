@@ -18,7 +18,8 @@ app.directive('projectItem', [ function(){
                             <h3><a href="https://github.com/TyTia77/{{project.source}}" target="_blank">view source code</a></h3>
                             <h3><a href="https://tytia77.github.io/{{project.live}}" target="_blank">view live</a></h3>
                             <h3 ng-show={{project.progress}}
-                                style="color: red">
+                                style="color: red"
+                                class="animated infinite flash">
                                     <ion-icon class="ion-alert-circled"></ion-icon>
                                     In Progress</h3>
                         </div>
