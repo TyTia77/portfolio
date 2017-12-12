@@ -31,11 +31,13 @@ $(document).ready(function() {
             })
         })
     } else {
-        $(document).on('mouseenter', '.hover-detail', function() {
-            $(this).addClass('show');
-            $(this).children('h3').children('a').css('pointer-events', 'all')
-        }).on('mouseleave', '.hover-detail', function() {
-            $(this).removeClass('show');
+        let animate = ['show', 'animated', 'swing'];
+
+        $(document).on('mouseenter', '.hover-detail', function () {
+            $(this).addClass(animate.join(' '));
+            $(this).children('h3').children('a').css('pointer-events', 'all');
+        }).on('mouseleave', '.hover-detail', function () {
+            $(this).removeClass(animate.join(' '));
             $(this).children('h3').children('a').css('pointer-events', 'none');
         });
     }
