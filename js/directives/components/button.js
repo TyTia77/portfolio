@@ -13,28 +13,11 @@ app.directive('buttonComp', [ function(){
                 ng-repeat="i in items | unique: 'category' | orderBy: 'category'">{{i.category}}</button>
         </div>`;
 
-    let controller = ['$scope', 'myService', function(scope, myService){
+    let controller = ["$scope", "myService", "hoverService", function(scope, myService, hoverSer) {
         scope.service = myService;
-        
-        scope.handleClick = e => myService.handleButton(scope.classList[0],scope.classList[1])(e)(scope.classList[2]);
-        scope.handleHover = e => {
-
-            // class list
-            let cl = e.currentTarget.classList;
-
-            let animation = ['animated', 'infinite', 'jello'];
-
-            switch(event.type){
-                case 'mouseover': 
-                    cl.add.apply(cl, animation);
-                    break;
-                
-                case 'mouseout':
-                    cl.remove.apply(cl, animation);
-                    break;
-            }
-        }
-    }];
+        scope.handleClick = e => myService.handleButton(scope.classList[0], scope.classList[1])(e)(scope.classList[2]);
+        scope.handleHover = e => hoverSer.hover(e.currentTarget.classList, event.type, 1);
+      }];
 
 	return {
 		scope: { items: '=', classList: '=' },
