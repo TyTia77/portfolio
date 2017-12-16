@@ -31,14 +31,22 @@ $(document).ready(function() {
             })
         })
     } else {
-        let animate = ['show', 'animated', 'swing'];
+        let animate = ['show', 'animated', 'flipInX'];
+        let target = '.project-image';
+        let child = '.hover-detail';
 
-        $(document).on('mouseenter', '.hover-detail', function () {
-            $(this).addClass(animate.join(' '));
-            $(this).children('h3').children('a').css('pointer-events', 'all');
-        }).on('mouseleave', '.hover-detail', function () {
-            $(this).removeClass(animate.join(' '));
-            $(this).children('h3').children('a').css('pointer-events', 'none');
+        $(document).on('mouseenter', target, function () {
+            $(this).
+                children(child).
+                addClass(animate.join(' ')).
+                css('pointer-events', 'all');
+        }).on('mouseleave', target, function () {
+            $(this).
+                children(child).
+                fadeOut(500, function(){
+                    this.removeClass(animate.join(' '));
+                }.bind($(this).children(child))).
+                css('pointer-events', 'none');
         });
     }
 })

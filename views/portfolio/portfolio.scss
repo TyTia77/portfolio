@@ -86,14 +86,13 @@
                             opacity: 0;
                             transition-duration: 1s;
                             left: 0;
+                            pointer-events: none;
 
                             h3{
-
                                 position: relative;
                                 top: 15%;
 
                                 a{
-                                    pointer-events: none;
                                     transition-duration: .2s;
                                     color: lightgrey;
                                     @include section-sub-header;
@@ -103,10 +102,12 @@
                                     }
 
                                     &:hover{
-                                        cursor: pointer;
                                         text-decoration: none;
-                                        color: $red;
                                     }
+                                }
+
+                                &:hover{
+                                    cursor: pointer;
                                 }
                             }
                         }
