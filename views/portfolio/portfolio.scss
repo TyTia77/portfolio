@@ -103,13 +103,11 @@ $animationSpeed: .7s;
                                         text-decoration: none;
                                     }
 
-                                    &:hover{
-                                        text-decoration: none;
+                                    label{
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
                                     }
-                                }
-
-                                &:hover{
-                                    cursor: pointer;
                                 }
                             }
                         }
