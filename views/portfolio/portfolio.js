@@ -31,21 +31,19 @@ $(document).ready(function() {
             })
         })
     } else {
-        let animate = ['show', 'animated', 'flipInX'];
         let target = '.project-image';
         let child = '.hover-detail';
+        let animateClass = 'show';
 
         $(document).on('mouseenter', target, function () {
             $(this).
                 children(child).
-                addClass(animate.join(' ')).
+                addClass(animateClass).
                 css('pointer-events', 'all');
         }).on('mouseleave', target, function () {
             $(this).
                 children(child).
-                fadeOut(500, function(){
-                    this.removeClass(animate.join(' '));
-                }.bind($(this).children(child))).
+                removeClass(animateClass).
                 css('pointer-events', 'none');
         });
     }
