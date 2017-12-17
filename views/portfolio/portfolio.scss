@@ -1,3 +1,5 @@
+$animationSpeed: .7s;
+
 .portfolio-header{
     color: lightgrey !important;
     @include section-header;
@@ -84,7 +86,7 @@
                             background-color: rgba(0,0,0,.85)!important;
                             border: 1px solid #E5E5E5;
                             opacity: 0;
-                            transition-duration: 1s;
+                            transition-duration: $animationSpeed;
                             left: 0;
                             pointer-events: none;
 
@@ -114,6 +116,7 @@
 
                         .show{
                             opacity: 1;
+                            transition-duration: $animationSpeed;
                         }
                     }
                 }
