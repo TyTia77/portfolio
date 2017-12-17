@@ -14,12 +14,16 @@ app.directive('projectItem', [ function(){
                 <div style="background-color: {{project.color}}">
                     <div class="project-image" ng-attr-style="{{service.getImage(project.img, project.color)}}">
                         <div class="hover-detail">
-                            <h3 
-                                ng-mouseover="handleHover($event)" 
-                                ng-mouseout="handleHover($event)"><a href="https://github.com/TyTia77/{{project.source}}" target="_blank">view source code</a></h3>
-                            <h3
-                                ng-mouseover="handleHover($event)" 
-                                ng-mouseout="handleHover($event)"><a href="https://tytia77.github.io/{{project.live}}" target="_blank">view live</a></h3>
+                            <h3>
+                                <a href="https://github.com/TyTia77/{{project.source}}" target="_blank">
+                                    <label
+                                        ng-mouseover="handleHover($event)" 
+                                        ng-mouseout="handleHover($event)">view source code</label></a></h3>
+                            <h3>
+                                <a href="https://tytia77.github.io/{{project.live}}" target="_blank">
+                                    <label
+                                        ng-mouseover="handleHover($event)" 
+                                        ng-mouseout="handleHover($event)">view live</label></a></h3>
                             <h3 ng-show={{project.progress}}
                                 style="color: red"
                                 class="animated infinite flash">
@@ -36,7 +40,7 @@ app.directive('projectItem', [ function(){
 
     let controller = ['$scope', 'myService', 'hoverService', function(scope, myService, hoverSer){
         scope.service = myService;
-        scope.handleHover = e => hoverSer.hover(e.currentTarget.classList, event.type, 0);
+        scope.handleHover = e => hoverSer.hover(e.currentTarget.classList, event.type, 2);
     }];
 
 	return {
