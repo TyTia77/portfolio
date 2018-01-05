@@ -1,13 +1,24 @@
+const angularFilesort = require('gulp-angular-filesort');
+const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat'); //concat css and js
+const gutil = require('gulp-util');
 const gulp = require('gulp');
+const inject = require('gulp-inject');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
-const babel = require('gulp-babel');
-const watch = require('gulp-watch');
-const uglify = require('gulp-uglify'); //only js
-const concat = require('gulp-concat'); //concat css and js
-const uglifycss = require('gulp-uglifycss');
-const autoprefixer = require('gulp-autoprefixer');
 const server = require('gulp-server-livereload');
+const uglify = require('gulp-uglify'); //only js
+const uglifycss = require('gulp-uglifycss');
+const watch = require('gulp-watch');
+
+// gulp.src('./src/app/index.html')
+//     .pipe(inject(
+//         gulp.src(['./src/app/**/*.js']).pipe(angularFilesort())
+//     ))
+//     .pipe(gulp.dest('./build'));
+
+
 
 gulp.task('buildcss', () => {
     return gulp
