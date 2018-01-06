@@ -2,3 +2,5 @@ node_modules
 npm-debug.log
 .vscode
 build
+src/script.js
+src/style.css
