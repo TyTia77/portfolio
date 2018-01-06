@@ -84,10 +84,10 @@ gulp.task('watch', () => {
         ['buildjs']);
 });
 
-gulp.task('inject', function () {
-    var paths = [path +'assets/*.js', path +'assets/*.css'];
-    var sources = inject(gulp.src(paths, {read: false}), {relative: true});
-    var google = ga({
+gulp.task('inject', () => {
+    const paths = [path +'assets/*.js', path +'assets/*.css'];
+    const sources = inject(gulp.src(paths, {read: false}), {relative: true});
+    const google = ga({
         url: 'auto',
         uid: 'UA-100566821-1',
         anonymizeIp: false,
