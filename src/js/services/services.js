@@ -2,115 +2,113 @@ app.service('myService', function(){
 
 	// data
 	this.projectsItems = [{
-            img: 'images/project/simon-game.PNG',
-            title: 'simon game',
-            source: 'simon-game',
-            live: 'simon-game',
-            color: '#fff',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#fff',
+            img      : 'images/project/simon-game.PNG',
+            live     : 'simon-game',
+            source   : 'simon-game',
+            title    : 'simon game'
         },
         {
-            img: 'images/project/movie-db.png',
-            title: 'movieDB',
-            source: 'movieDB/tree/trunk',
-            live: 'movieDB',
-            color: '#000',
-            category: 'react',
-            progress: true
+            category : 'react',
+            color    : '#000',
+            img      : 'images/project/movie-db.png',
+            live     : 'movieDB',
+            progress : true,
+            source   : 'movieDB/tree/trunk',
+            title    : 'movieDB',
         },
         {
-            img: 'images/project/tic-tac-toe-game.PNG',
-            title: 'tic tac toe game',
-            source: 'tictactoe',
-            live: 'tictactoe',
-            color: '#162924',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#162924',
+            img      : 'images/project/tic-tac-toe-game.PNG',
+            live     : 'tictactoe',
+            source   : 'tictactoe',
+            title    : 'tic tac toe game'
         },
         {
-            img: 'images/project/weather-app.PNG',
-            title: 'weather app',
-            source: 'weatherapp',
-            live: 'weatherapp',
-            color: '#0262B6',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#0262B6',
+            img      : 'images/project/weather-app.PNG',
+            live     : 'weatherapp',
+            source   : 'weatherapp',
+            title    : 'weather app'
         },
         {
-            img: 'images/project/todo.png',
-            title: 'todo app',
-            source: 'todo',
-            live: 'todo',
-            color: '#fff',
-            category: 'react'
+            category : 'react',
+            color    : '#fff',
+            img      : 'images/project/todo.png',
+            live     : 'todo',
+            source   : 'todo/tree/trunk',
+            title    : 'todo app'
         },
         {
-            img: 'images/project/wikipedia-search.PNG',
-            title: 'wikipedia search',
-            source: 'wiki-viewer',
-            live: 'wiki-viewer',
-            color: '#092B40',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#092B40',
+            img      : 'images/project/wikipedia-search.PNG',
+            live     : 'wiki-viewer',
+            source   : 'wiki-viewer',
+            title    : 'wikipedia search'
         },
         {
-            img: 'images/project/twitch-stream-viewer.PNG',
-            title: 'twitch stream viewer',
-            source: 'twitch-streams',
-            live: 'twitch-streams',
-            color: '#fff',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#fff',
+            img      : 'images/project/twitch-stream-viewer.PNG',
+            live     : 'twitch-streams',
+            source   : 'twitch-streams',
+            title    : 'twitch stream viewer'
         },
         {
-            img: 'images/project/calculator.PNG',
-            title: 'calculator',
-            source: 'calculator',
-            live: 'calculator',
-            color: '#fff',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#fff',
+            img      : 'images/project/calculator.PNG',
+            live     : 'calculator',
+            source   : 'calculator',
+            title    : 'calculator'
         },
         {
-            img: 'images/project/quote-generater.PNG',
-            title: 'quote generater',
-            source: 'quotes',
-            live: 'quotes',
-            color: '#E74C3C',
-            category: 'angularJS'
+            category : 'angularJS',
+            color    : '#E74C3C',
+            img      : 'images/project/quote-generater.PNG',
+            live     : 'quotes',
+            source   : 'quotes',
+            title    : 'quote generater'
         }
     ];
 
-    this.projectCategory = [{
-        category: 'react'
-    },{
-        category: 'angularJS'
-    },{
-        category: 'all'
-    }];
+    this.projectCategory = [
+        { category : 'react' },
+        { category : 'angularJS' },
+        { category : 'all' }
+    ];
 
     this.skillItems = [
-        {label: 'HTML', scale: '.75', category: 'language'},
-        {label: 'CSS', category: 'language'},
-        {label: 'javascript', scale: '.8', category: 'language'},
-        {label: 'SCSS', category: 'language'},
-        {label: 'bootstrap', category: 'library'},
-        {label: 'responsive', category: 'all'},
-        {label: 'JQuery', scale: '.7', category: 'library'},
-        {label: 'angularJS', category: 'framework'},
-        {label: 'polymer', category: 'framework'},
-        {label: 'NPM', category: 'package manager'},
-        {label: 'gulp', category: 'build system'},
-        {label: 'bower', category: 'package manager'},
-        {label: 'git hub', scale: '.95', category: 'version control'},
-        {label: 'bit bucket', category: 'version control'},
-        {label: 'source tree', category: 'version control'},
-        {label: 'git', category: 'version control'},
-        {label: 'sub version', category: 'version control'},
-        {label: 'photoshop', category: 'all'}
+        { label : 'angularJS', category   : 'framework' },
+        { label : 'bit bucket', category  : 'version control' },
+        { label : 'bootstrap', category   : 'library' },
+        { label : 'bower', category       : 'package manager' },
+        { label : 'CSS', category         : 'language' },
+        { label : 'git hub', scale        : '.95', category : 'version control' },
+        { label : 'git', category         : 'version control' },
+        { label : 'gulp', category        : 'build system' },
+        { label : 'HTML', scale           : '.75', category : 'language' },
+        { label : 'javascript', scale     : '.8', category  : 'language' },
+        { label : 'JQuery', scale         : '.7', category  : 'library' },
+        { label : 'NPM', category         : 'package manager' },
+        { label : 'photoshop', category   : 'all' },
+        { label : 'polymer', category     : 'framework' },
+        { label : 'responsive', category  : 'all' },
+        { label : 'SCSS', category        : 'language' },
+        { label : 'source tree', category : 'version control' },
+        { label : 'sub version', category : 'version control' },
     ];
 
 
     // get
-    this.getProjectItems = () => this.projectsItems;
+    this.getProjectItems    = () => this.projectsItems;
     this.getProjectCategory = () => this.projectCategory;
-    this.getSkillItems = () => this.skillItems.filter(item => item.label !== 'photoshop');
-    this.getImage = (img, color) => 
+    this.getSkillItems      = () => this.skillItems.filter(item => item.label !== 'photoshop');
+    this.getImage           = (img, color) => 
         color 
         ? `background-image: url(${img}); background-color: ${color};` 
         : `images/icons/${img.replace(' ', '').toLowerCase()}.png`;

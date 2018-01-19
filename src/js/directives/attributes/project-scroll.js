@@ -1,41 +1,40 @@
 app.directive('scrollEffect', ['$timeout', function($timeout){
     return {
-        restrict: 'A',
-        link: function(){
+        restrict : 'A',
+        link     : function(){
             $timeout(function(){
                 sr.reveal('.portfolio-header', {
-                    origin: 'top',
-                    viewFactor: .1,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
+                    distance   : '100px',
+                    duration   : 700,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'top',
+                    reset      : false,
+                    scale      : .1,
+                    viewFactor : .1
                 })
 
                 sr.reveal('.portfolio-container .line', {
-                    origin: 'center',
-                    viewFactor: .1,
-                    opacity: 0,
-                    duration: 2000,
-                    scale: 0.1,
-                    rotate: { x: 0, y: 90, z: 0 },
-                    reset: false,
-                    mobile: true
+                    duration   : 2000,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'center',
+                    reset      : false,
+                    rotate     : { x: 0, y: 90, z: 0 },
+                    scale      : 0.1,
+                    viewFactor : .1
                 })
 
                 sr.reveal('.project-grid', {
-                    origin: 'left',
-                    viewFactor: .1,
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
+                    duration   : 700,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'left',
+                    reset      : false,
+                    scale      : .1,
+                    viewFactor : .1
                 })                
             }, 0);
-
         }
     }
 }]);

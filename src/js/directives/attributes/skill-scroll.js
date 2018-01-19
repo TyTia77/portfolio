@@ -1,50 +1,50 @@
 app.directive('skillLoad', ['$timeout', function($timeout){
     return {
-        restrict: 'A',
-        link: function(){
+        restrict : 'A',
+        link     : function(){
             $timeout(function(){
                 sr.reveal('.skill-container>h1', {
-                    origin: 'top',
-                    viewFactor: .1,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
+                    distance   : '100px',
+                    duration   : 700,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'top',
+                    reset      : false,
+                    scale      : .1,
+                    viewFactor : .1
                 })
 
                 sr.reveal('.skill-container .line', {
-                    origin: 'center',
-                    viewFactor: .1,
-                    opacity: 0,
-                    duration: 2000,
-                    scale: 0.1,
-                    rotate: { x: 0, y: 90, z: 0 },
-                    reset: false,
-                    mobile: true
+                    duration   : 2000,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'center',
+                    reset      : false,
+                    rotate     : { x: 0, y: 90, z: 0 },
+                    scale      : 0.1,
+                    viewFactor : .1
                 })
 
                 sr.reveal('.button-container', {
-                    origin: 'bottom',
-                    viewFactor: .1,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
+                    distance   : '100px',
+                    duration   : 700,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'bottom',
+                    reset      : false,
+                    scale      : .1,
+                    viewFactor : .1
                 })
 
                 sr.reveal('.skill-row', {
-                    origin: 'bottom',
-                    viewFactor: .1,
-                    distance: '100px',
-                    opacity: 0,
-                    duration: 700,
-                    scale: .1,
-                    reset: false,
-                    mobile: true
+                    distance   : '100px',
+                    duration   : 700,
+                    mobile     : true,
+                    opacity    : 0,
+                    origin     : 'bottom',
+                    reset      : false,
+                    scale      : .1,
+                    viewFactor : .1
                 })
             })
         }

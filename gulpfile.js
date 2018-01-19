@@ -1,22 +1,22 @@
 const autoprefixer = require('gulp-autoprefixer')
-const babel = require('gulp-babel')
-const clean = require('gulp-clean') //removes folders/files
-const concat = require('gulp-concat') //concat css and js
-const ga = require('gulp-ga') //google analytics
-const gulp = require('gulp')
+const babel        = require('gulp-babel')
+const clean        = require('gulp-clean') //removes folders/files
+const concat       = require('gulp-concat') //concat css and js
+const ga           = require('gulp-ga') //google analytics
+const gulp         = require('gulp')
 const gulpSequence = require('gulp-sequence') // allows tasks to be executed synchronously
-const gutil = require('gulp-util') // for environment type
-const imagemin = require('gulp-imagemin')
-const inject = require('gulp-inject')
-const sass = require('gulp-sass')
-const sassGlob = require('gulp-sass-glob')
-const server = require('gulp-server-livereload')
-const uglify = require('gulp-uglify') //only js
-const uglifycss = require('gulp-uglifycss')
-const watch = require('gulp-watch')
+const gutil        = require('gulp-util') // for environment type
+const imagemin     = require('gulp-imagemin')
+const inject       = require('gulp-inject')
+const sass         = require('gulp-sass')
+const sassGlob     = require('gulp-sass-glob')
+const server       = require('gulp-server-livereload')
+const uglify       = require('gulp-uglify') //only js
+const uglifycss    = require('gulp-uglifycss')
+const watch        = require('gulp-watch')
 
 // environment, dev or production
-const env = gutil.env.type
+const env  = gutil.env.type
 const path = env ? './build/' : './src/'
 
 gulp.task('buildimg', () =>
@@ -62,9 +62,9 @@ gulp.task('buildviews', () =>
 gulp.task('webserver', () => {
   gulp.src('./src')
     .pipe(server({
-      livereload: true,
-      open: true,
-      port: 9000
+      livereload : true,
+      open       : true,
+      port       : 9000
     }));
 });
 
@@ -85,12 +85,12 @@ gulp.task('watch', () => {
 });
 
 gulp.task('inject', () => {
-    const paths = [path +'assets/*.js', path +'assets/*.css'];
+    const paths   = [path +'assets/*.js', path +'assets/*.css'];
     const sources = inject(gulp.src(paths, {read: false}), {relative: true});
-    const google = ga({
-        url: 'auto',
-        uid: 'UA-100566821-1',
-        anonymizeIp: false,
+    const google  = ga({
+        url         : 'auto',
+        uid         : 'UA-100566821-1',
+        anonymizeIp : false,
         sendPageView: true,
     });
 

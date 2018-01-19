@@ -121,80 +121,74 @@ app.service('myService', function () {
 
     // data
     this.projectsItems = [{
+        category: 'angularJS',
+        color: '#fff',
         img: 'images/project/simon-game.PNG',
-        title: 'simon game',
-        source: 'simon-game',
         live: 'simon-game',
-        color: '#fff',
-        category: 'angularJS'
+        source: 'simon-game',
+        title: 'simon game'
     }, {
-        img: 'images/project/movie-db.png',
-        title: 'movieDB',
-        source: 'movieDB/tree/trunk',
-        live: 'movieDB',
-        color: '#000',
         category: 'react',
-        progress: true
+        color: '#000',
+        img: 'images/project/movie-db.png',
+        live: 'movieDB',
+        progress: true,
+        source: 'movieDB/tree/trunk',
+        title: 'movieDB'
     }, {
-        img: 'images/project/tic-tac-toe-game.PNG',
-        title: 'tic tac toe game',
-        source: 'tictactoe',
-        live: 'tictactoe',
+        category: 'angularJS',
         color: '#162924',
-        category: 'angularJS'
+        img: 'images/project/tic-tac-toe-game.PNG',
+        live: 'tictactoe',
+        source: 'tictactoe',
+        title: 'tic tac toe game'
     }, {
-        img: 'images/project/weather-app.PNG',
-        title: 'weather app',
-        source: 'weatherapp',
-        live: 'weatherapp',
+        category: 'angularJS',
         color: '#0262B6',
-        category: 'angularJS'
+        img: 'images/project/weather-app.PNG',
+        live: 'weatherapp',
+        source: 'weatherapp',
+        title: 'weather app'
     }, {
+        category: 'react',
+        color: '#fff',
         img: 'images/project/todo.png',
-        title: 'todo app',
-        source: 'todo',
         live: 'todo',
-        color: '#fff',
-        category: 'react'
+        source: 'todo/tree/trunk',
+        title: 'todo app'
     }, {
-        img: 'images/project/wikipedia-search.PNG',
-        title: 'wikipedia search',
-        source: 'wiki-viewer',
-        live: 'wiki-viewer',
+        category: 'angularJS',
         color: '#092B40',
-        category: 'angularJS'
+        img: 'images/project/wikipedia-search.PNG',
+        live: 'wiki-viewer',
+        source: 'wiki-viewer',
+        title: 'wikipedia search'
     }, {
+        category: 'angularJS',
+        color: '#fff',
         img: 'images/project/twitch-stream-viewer.PNG',
-        title: 'twitch stream viewer',
-        source: 'twitch-streams',
         live: 'twitch-streams',
-        color: '#fff',
-        category: 'angularJS'
+        source: 'twitch-streams',
+        title: 'twitch stream viewer'
     }, {
+        category: 'angularJS',
+        color: '#fff',
         img: 'images/project/calculator.PNG',
-        title: 'calculator',
-        source: 'calculator',
         live: 'calculator',
-        color: '#fff',
-        category: 'angularJS'
+        source: 'calculator',
+        title: 'calculator'
     }, {
-        img: 'images/project/quote-generater.PNG',
-        title: 'quote generater',
-        source: 'quotes',
-        live: 'quotes',
+        category: 'angularJS',
         color: '#E74C3C',
-        category: 'angularJS'
+        img: 'images/project/quote-generater.PNG',
+        live: 'quotes',
+        source: 'quotes',
+        title: 'quote generater'
     }];
 
-    this.projectCategory = [{
-        category: 'react'
-    }, {
-        category: 'angularJS'
-    }, {
-        category: 'all'
-    }];
+    this.projectCategory = [{ category: 'react' }, { category: 'angularJS' }, { category: 'all' }];
 
-    this.skillItems = [{ label: 'HTML', scale: '.75', category: 'language' }, { label: 'CSS', category: 'language' }, { label: 'javascript', scale: '.8', category: 'language' }, { label: 'SCSS', category: 'language' }, { label: 'bootstrap', category: 'library' }, { label: 'responsive', category: 'all' }, { label: 'JQuery', scale: '.7', category: 'library' }, { label: 'angularJS', category: 'framework' }, { label: 'polymer', category: 'framework' }, { label: 'NPM', category: 'package manager' }, { label: 'gulp', category: 'build system' }, { label: 'bower', category: 'package manager' }, { label: 'git hub', scale: '.95', category: 'version control' }, { label: 'bit bucket', category: 'version control' }, { label: 'source tree', category: 'version control' }, { label: 'git', category: 'version control' }, { label: 'sub version', category: 'version control' }, { label: 'photoshop', category: 'all' }];
+    this.skillItems = [{ label: 'angularJS', category: 'framework' }, { label: 'bit bucket', category: 'version control' }, { label: 'bootstrap', category: 'library' }, { label: 'bower', category: 'package manager' }, { label: 'CSS', category: 'language' }, { label: 'git hub', scale: '.95', category: 'version control' }, { label: 'git', category: 'version control' }, { label: 'gulp', category: 'build system' }, { label: 'HTML', scale: '.75', category: 'language' }, { label: 'javascript', scale: '.8', category: 'language' }, { label: 'JQuery', scale: '.7', category: 'library' }, { label: 'NPM', category: 'package manager' }, { label: 'photoshop', category: 'all' }, { label: 'polymer', category: 'framework' }, { label: 'responsive', category: 'all' }, { label: 'SCSS', category: 'language' }, { label: 'source tree', category: 'version control' }, { label: 'sub version', category: 'version control' }];
 
     // get
     this.getProjectItems = function () {
@@ -259,35 +253,35 @@ app.directive('scrollEffect', ['$timeout', function ($timeout) {
         link: function link() {
             $timeout(function () {
                 sr.reveal('.portfolio-header', {
-                    origin: 'top',
-                    viewFactor: .1,
                     distance: '100px',
-                    opacity: 0,
                     duration: 700,
-                    scale: .1,
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'top',
                     reset: false,
-                    mobile: true
+                    scale: .1,
+                    viewFactor: .1
                 });
 
                 sr.reveal('.portfolio-container .line', {
-                    origin: 'center',
-                    viewFactor: .1,
-                    opacity: 0,
                     duration: 2000,
-                    scale: 0.1,
-                    rotate: { x: 0, y: 90, z: 0 },
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'center',
                     reset: false,
-                    mobile: true
+                    rotate: { x: 0, y: 90, z: 0 },
+                    scale: 0.1,
+                    viewFactor: .1
                 });
 
                 sr.reveal('.project-grid', {
-                    origin: 'left',
-                    viewFactor: .1,
-                    opacity: 0,
                     duration: 700,
-                    scale: .1,
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'left',
                     reset: false,
-                    mobile: true
+                    scale: .1,
+                    viewFactor: .1
                 });
             }, 0);
         }
@@ -301,47 +295,47 @@ app.directive('skillLoad', ['$timeout', function ($timeout) {
         link: function link() {
             $timeout(function () {
                 sr.reveal('.skill-container>h1', {
-                    origin: 'top',
-                    viewFactor: .1,
                     distance: '100px',
-                    opacity: 0,
                     duration: 700,
-                    scale: .1,
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'top',
                     reset: false,
-                    mobile: true
+                    scale: .1,
+                    viewFactor: .1
                 });
 
                 sr.reveal('.skill-container .line', {
-                    origin: 'center',
-                    viewFactor: .1,
-                    opacity: 0,
                     duration: 2000,
-                    scale: 0.1,
-                    rotate: { x: 0, y: 90, z: 0 },
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'center',
                     reset: false,
-                    mobile: true
+                    rotate: { x: 0, y: 90, z: 0 },
+                    scale: 0.1,
+                    viewFactor: .1
                 });
 
                 sr.reveal('.button-container', {
-                    origin: 'bottom',
-                    viewFactor: .1,
                     distance: '100px',
-                    opacity: 0,
                     duration: 700,
-                    scale: .1,
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'bottom',
                     reset: false,
-                    mobile: true
+                    scale: .1,
+                    viewFactor: .1
                 });
 
                 sr.reveal('.skill-row', {
-                    origin: 'bottom',
-                    viewFactor: .1,
                     distance: '100px',
-                    opacity: 0,
                     duration: 700,
-                    scale: .1,
+                    mobile: true,
+                    opacity: 0,
+                    origin: 'bottom',
                     reset: false,
-                    mobile: true
+                    scale: .1,
+                    viewFactor: .1
                 });
             });
         }
