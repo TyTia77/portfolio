@@ -14,15 +14,15 @@ app.directive('buttonComp', [ function(){
         </div>`;
 
     let controller = ["$scope", "myService", "hoverService", function(scope, myService, hoverSer) {
-        scope.service = myService;
+        scope.service     = myService;
         scope.handleClick = e => myService.handleButton(scope.classList[0], scope.classList[1])(e)(scope.classList[2]);
         scope.handleHover = e => hoverSer.hover(e.currentTarget.classList, event.type, 1);
       }];
 
 	return {
-		scope: { items: '=', classList: '=' },
-		controller: controller,
-		restrict: 'E',
-        template: template,
+		scope          : { items: '=', classList: '=' },
+		controller     : controller,
+		restrict       : 'E',
+        template       : template,
 	};
 }]);
