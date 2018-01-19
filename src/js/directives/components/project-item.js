@@ -39,14 +39,14 @@ app.directive('projectItem', [ function(){
         </div>`;
 
     let controller = ['$scope', 'myService', 'hoverService', function(scope, myService, hoverSer){
-        scope.service = myService;
+        scope.service     = myService;
         scope.handleHover = e => hoverSer.hover(e.currentTarget.classList, event.type, 2);
     }];
 
 	return {
-		scope: { items: '=' },
-		controller: controller,
-		restrict: 'E',
-        template: template,
+		scope          : { items: '=' },
+		controller     : controller,
+		restrict       : 'E',
+        template       : template,
 	};
 }]);
