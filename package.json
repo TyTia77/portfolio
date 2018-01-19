@@ -1,33 +1,44 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "author"      : "Ty Tia",
+  "description" : "Portfolio",
+  "homepage"    : "https://github.com/TyTia77/portfolio#readme",
+  "license"     : "ISC",
+  "main"        : "script.js",
+  "name"        : "portfolio",
+  "version"     : "1.0.0",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "build" : "gulp --type=prod build",
+    "start" : "gulp"
   },
+
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TyTia77/portfolio.git"
+    "type" : "git",
+    "url"  : "git+https://github.com/TyTia77/portfolio.git"
   },
-  "author": "",
-  "license": "ISC",
+
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.8",
-    "gulp-server-livereload": "^1.9.2",
-    "gulp-uglify": "^3.0.0",
-    "gulp-uglifycss": "^1.0.8",
-    "gulp-watch": "^4.3.11"
+    "babel-preset-es2015"    : "^6.24.1",
+    "gulp-autoprefixer"      : "^4.0.0",
+    "gulp-babel"             : "^6.1.2",
+    "gulp-clean"             : "^0.3.2",
+    "gulp-concat"            : "^2.6.1",
+    "gulp-ga"                : "0.0.8",
+    "gulp-imagemin"          : "^4.1.0",
+    "gulp-inject"            : "^4.3.0",
+    "gulp-sass-glob"         : "^1.0.8",
+    "gulp-sass"              : "^3.1.0",
+    "gulp-sequence"          : "^1.0.0",
+    "gulp-server-livereload" : "^1.9.2",
+    "gulp-uglify"            : "^3.0.0",
+    "gulp-uglifycss"         : "^1.0.8",
+    "gulp-util"              : "^3.0.8",
+    "gulp-watch"             : "^4.3.11",
+    "gulp"                   : "^3.9.1"
   },
+
   "bugs": {
     "url": "https://github.com/TyTia77/portfolio/issues"
-  },
-  "homepage": "https://github.com/TyTia77/portfolio#readme"
+  }
+
 }

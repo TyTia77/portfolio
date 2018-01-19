@@ -16,9 +16,9 @@ app.directive('skillItem', [ function(){
     }];
 
 	return {
-		scope: { items: '=' },
-		controller: controller,
-		restrict: 'E',
-        template: template,
+		scope          : { items: '=' },
+		controller     : controller,
+		restrict       : 'E',
+        template       : template,
 	};
 }]);
