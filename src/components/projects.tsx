@@ -1,6 +1,6 @@
-// import Link from "next/link";
 import { useState } from "react";
 import HoverAnimate from "./hoverAnimate";
+import dragdropImg from "../assets/dragdrop.png";
 
 interface Project {
   id: number;
@@ -13,9 +13,9 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "placeholder 1",
-    url: "#",
-    imageUrl: "",
+    title: "desktop simulation",
+    url: "https://tytia77.github.io/dragdrop/",
+    imageUrl: dragdropImg,
     filename: "project-one",
   },
   {
@@ -68,23 +68,23 @@ function ProjectCard({ project }: { project: Project }) {
             className="h-full w-full bg-contain bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${project.imageUrl})` }}
           >
-            {/* Hover overlay */}
-            <div
-              className={`absolute inset-0 bg-black/85 border border-[#E5E5E5] flex items-start justify-center transition-opacity duration-300 ${
-                hovered ? "opacity-100" : "opacity-0 pointer-events-none"
-              }`}
+            <a
+              href={project.url}
+              className="text-gray-300 hover:text-white text-lg font-semibold no-underline transition-colors duration-200 [-webkit-font-smoothing:antialiased]"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <h3 className="relative top-[15%] text-center">
-                {/* <Link
-                  href="/dragdrop"
-                  className="text-gray-300 hover:text-white text-lg font-semibold no-underline transition-colors duration-200 [-webkit-font-smoothing:antialiased]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              {/* Hover overlay */}
+              <div
+                className={`absolute inset-0 bg-black/85 border border-[#E5E5E5] flex items-start justify-center transition-opacity duration-300 ${
+                  hovered ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}
+              >
+                <h3 className="relative top-[15%] text-center">
                   <label className="cursor-pointer">{project.title}</label>
-                </Link> */}
-              </h3>
-            </div>
+                </h3>
+              </div>
+            </a>
           </div>
         </div>
       </div>

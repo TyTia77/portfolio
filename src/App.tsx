@@ -31,7 +31,7 @@ function App() {
       {/* Hero */}
       <section className="grid grid-cols-[1fr_180px] gap-8 items-start mb-20 text-left">
         <div className="animate__animated animate__bounceInLeft">
-          <p className="animate__animated animate__bounce animate__infinite animate__slow text-xs uppercase tracking-widest text-gray-400 mb-4">
+          <p className="animate__animated animate__flash animate__infinite animate__slower text-xs uppercase tracking-widest text-red-400 mb-4">
             Available for work
           </p>
           <h1 className="font-serif text-5xl font-light leading-tight tracking-tight mb-5">
@@ -121,7 +121,7 @@ function App() {
           {[
             { label: "Email", href: "mailto:tytia77@gmail.com" },
             { label: "GitHub", href: "https://github.com/TyTia77" },
-            { label: "CV", href: "/cv.pdf" },
+            // { label: "CV", href: "/cv.pdf" },
           ].map(({ label, href }) => (
             <a
               key={label}
