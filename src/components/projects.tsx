@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HoverAnimate from "./hoverAnimate";
 import dragdropImg from "../assets/dragdrop.png";
+import moviedbImg from "../assets/moviedb.png";
 
 interface Project {
   id: number;
@@ -20,9 +21,9 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "placeholder 2",
-    url: "#",
-    imageUrl: "",
+    title: "movie db",
+    url: "https://movie-nextjs-1ikfzb37j-ty-s-projects10.vercel.app/",
+    imageUrl: moviedbImg,
     filename: "project-two",
   },
   {
