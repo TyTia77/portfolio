@@ -2,6 +2,7 @@ import { useState } from "react";
 import HoverAnimate from "./hoverAnimate";
 import dragdropImg from "../assets/dragdrop.png";
 import moviedbImg from "../assets/moviedb.png";
+import shopImg from "../assets/shop.png";
 
 interface Project {
   id: number;
@@ -22,15 +23,15 @@ const projects: Project[] = [
   {
     id: 2,
     title: "movie db",
-    url: "https://movie-nextjs-1ikfzb37j-ty-s-projects10.vercel.app/",
+    url: "https://movie-nextjs-theta.vercel.app/",
     imageUrl: moviedbImg,
     filename: "project-two",
   },
   {
     id: 3,
-    title: "placeholder 3",
-    url: "#",
-    imageUrl: "",
+    title: "shop",
+    url: "https://shop-sepia-theta.vercel.app/",
+    imageUrl: shopImg,
     filename: "project-three",
   },
   {
