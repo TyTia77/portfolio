@@ -3,6 +3,7 @@ import HoverAnimate from "./hoverAnimate";
 import dragdropImg from "../assets/dragdrop.png";
 import moviedbImg from "../assets/moviedb.png";
 import shopImg from "../assets/shop.png";
+import socialsImg from "../assets/socials.png";
 
 interface Project {
   id: number;
@@ -36,9 +37,9 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "placeholder 4",
-    url: "#",
-    imageUrl: "",
+    title: "socials",
+    url: "https://socials-mauve.vercel.app/",
+    imageUrl: socialsImg,
     filename: "project-four",
   },
 ];
