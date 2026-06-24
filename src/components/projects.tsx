@@ -1,6 +1,9 @@
 import { useState } from "react";
 import HoverAnimate from "./hoverAnimate";
 import dragdropImg from "../assets/dragdrop.png";
+import moviedbImg from "../assets/moviedb.png";
+import shopImg from "../assets/shop.png";
+import socialsImg from "../assets/socials.png";
 
 interface Project {
   id: number;
@@ -20,23 +23,23 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "placeholder 2",
-    url: "#",
-    imageUrl: "",
+    title: "movie db",
+    url: "https://movie-nextjs-theta.vercel.app/",
+    imageUrl: moviedbImg,
     filename: "project-two",
   },
   {
     id: 3,
-    title: "placeholder 3",
-    url: "#",
-    imageUrl: "",
+    title: "shop",
+    url: "https://shop-sepia-theta.vercel.app/",
+    imageUrl: shopImg,
     filename: "project-three",
   },
   {
     id: 4,
-    title: "placeholder 4",
-    url: "#",
-    imageUrl: "",
+    title: "socials",
+    url: "https://socials-mauve.vercel.app/",
+    imageUrl: socialsImg,
     filename: "project-four",
   },
 ];
